@@ -1376,7 +1376,7 @@ function validateJson(jsonString) {
   }
 }
 
-async function loadPresets(dropdownElement, codeElement) {
+async function loadPresets(dropdownElement, codeElement, codeElementDisplay) {
   dropdownElement.querySelectorAll("*:not(.gbar-config-dropdown-spacer#default):not(.gbar-config-dropdown-item#preset)").forEach((element) => {
     element.remove();
   });
@@ -1397,6 +1397,7 @@ async function loadPresets(dropdownElement, codeElement) {
       presetElement.addEventListener("click", async function () {
         presetElement.blur();
         codeElement.value = JSON.stringify(item, null, 2);
+        codeElementDisplay.innerHTML = syntaxHighlight(codeElement.value);
 
         if (!dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
           const deleteElement = document.createElement("button");
@@ -1412,7 +1413,7 @@ async function loadPresets(dropdownElement, codeElement) {
               dropdownElement.querySelector(".gbar-config-dropdown-spacer:not(#default)").remove();
             }
             await GM.setValue("custom-presets", customPresets);
-            loadPresets(dropdownElement, codeElement);
+            loadPresets(dropdownElement, codeElement, codeElementDisplay);
           });
           dropdownElement.appendChild(deleteElement);
         }
@@ -1434,12 +1435,13 @@ async function loadPresets(dropdownElement, codeElement) {
         deleteElement.remove();
       }
       codeElement.value = JSON.stringify(item, null, 2);
+      codeElementDisplay.innerHTML = syntaxHighlight(codeElement.value);
       presetElement.blur();
     });
   }
 }
 
-async function saveCustomPreset(json, dropdownElement, codeElement) {
+async function saveCustomPreset(json, dropdownElement, codeElement, codeElementDisplay) {
   let itemAdded = false;
   if (customPresets.length) {
     customPresets.forEach((item) => {
@@ -1454,7 +1456,7 @@ async function saveCustomPreset(json, dropdownElement, codeElement) {
     customPresets.push(json);
   }
   await GM.setValue("custom-presets", customPresets);
-  await loadPresets(dropdownElement, codeElement);
+  await loadPresets(dropdownElement, codeElement, codeElementDisplay);
 }
 
 function detectLocation(layout, item) {
@@ -1720,6 +1722,36 @@ async function loadConfig() {
   });
 }
 
+function syntaxHighlight(json) {
+  if (typeof json != "string") {
+    json = JSON.stringify(json, null, "\t");
+  }
+
+  json = json
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  return json.replace(
+    /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+    function(match) {
+      var cls = "number";
+      if (/^"/.test(match)) {
+        if (/:$/.test(match)) {
+          cls = "key";
+        } else {
+          cls = "string";
+        }
+      } else if (/true|false/.test(match)) {
+        cls = "boolean";
+      } else if (/null/.test(match)) {
+        cls = "null";
+      }
+      return '<span class="' + cls + '">' + match + "</span>";
+    }
+  );
+}
+
 async function changeConfig() {
   if (settingsOpen) {
     return;
@@ -1742,7 +1774,10 @@ async function changeConfig() {
       </div>
     </div>
     <div id="gbar-config-content">
-      <textarea id="gbar-config-code" placeholder="Insert JSON Here..." spellcheck="false"></textarea>
+      <div id="gbar-config-code">
+        <code id="gbar-config-code-display"></code>
+        <textarea id="gbar-config-code-edit" placeholder="Insert JSON Here..." spellcheck="false"></textarea>
+      </div>
     </div>
     <div id="gbar-config-footer">
       <button class="gbar-config-button" id="apply">Apply</button>
@@ -1915,39 +1950,95 @@ async function changeConfig() {
       border-top: 1px solid #bebebe;
     }
     #gbar-config-code {
+      display: grid;
+      position: relative;
       font-family: "Courier New", Courier, monospace !important;
       font-size: 10.5pt;
-      flex: 1;
-      resize: none;
       border: 1px solid #d9d9d9;
       border-top: 1px solid #b4b4b4;
       outline: none;
       margin: 10px;
+      overflow: auto;
+      height: 534px;
     }
     #gbar-config-code:hover {
       border: 1px solid #b4b4b4;
     }
-    #gbar-config-code:focus {
+    #gbar-config-code:focus-within {
       border: 1px solid #4d90fe;
+    }
+    #gbar-config-code-edit {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 10.5pt;
+      resize: none;
+      color: transparent;
+      caret-color: #263238;
+      background-color: transparent;
+    }
+    #gbar-config-code-display {
+      pointer-events: none;
+      grid-column: 1;
+      grid-row: 1;
+      white-space: pre;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      color: #263238;
+      font-family: "Courier New", Courier, monospace !important;
+      font-size: 10.5pt;
+      .string {
+        color: #B71C1C;
+      }
+      .number {
+        color: #263238;
+      }
+      .key {
+        color: #2196F3;
+      }
+      .boolean,
+      .null {
+        color: #3F51B5;
+      }
+      * {
+        font-family: "Courier New", Courier, monospace !important;
+        font-size: 10.5pt;
+      }
     }
   </style>
   `;
 
-  const codeElement = gBarSettings.querySelector("#gbar-config-code");
-  codeElement.value = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
+  const codeElementEdit = gBarSettings.querySelector("#gbar-config-code-edit");
+  const codeElementDisplay = gBarSettings.querySelector("#gbar-config-code-display");
+  codeElementEdit.value = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
+  codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+
+  codeElementEdit.addEventListener("input", () => {
+      codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+  })
 
   const dropdownElement = gBarSettings.querySelector("#gbar-config-dropdown-items");
 
-  await loadPresets(dropdownElement, codeElement);
+  await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
 
   const savePresetElement = gBarSettings.querySelector(".gbar-config-dropdown-item#preset");
 
   savePresetElement.addEventListener("click", async function () {
-    const jsonValid = validateJson(codeElement.value);
+    const jsonValid = validateJson(codeElementEdit.value);
 
     if (jsonValid == true) {
-      const json = JSON.parse(codeElement.value);
-      await saveCustomPreset(json, dropdownElement, codeElement);
+      const json = JSON.parse(codeElementEdit.value);
+      await saveCustomPreset(json, dropdownElement, codeElementEdit);
     } else {
       alert(jsonValid);
     }
@@ -1956,23 +2047,23 @@ async function changeConfig() {
   });
 
   gBarSettings.querySelector(".gbar-config-button#apply").addEventListener("click", async function () {
-    const jsonValid = validateJson(codeElement.value);
+    const jsonValid = validateJson(codeElementEdit.value);
 
     if (jsonValid == true) {
-      await GM.setValue("config", codeElement.value);
+      await GM.setValue("config", codeElementEdit.value);
       loadConfig();
     } else {
       alert(jsonValid);
     }
   });
 
-  codeElement.addEventListener("keydown", async (e) => {
+  codeElementEdit.addEventListener("keydown", async (e) => {
     if (e.ctrlKey && e.key === "s") {
       e.preventDefault();
-      const jsonValid = validateJson(codeElement.value);
+      const jsonValid = validateJson(codeElementEdit.value);
 
       if (jsonValid == true) {
-        await GM.setValue("config", codeElement.value);
+        await GM.setValue("config", codeElementEdit.value);
         loadConfig();
       } else {
         alert(jsonValid);
