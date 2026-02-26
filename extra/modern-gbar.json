@@ -1,0 +1,140 @@
+{
+    "name": "Modern",
+    "theme": "2013",
+    "layout": [
+        {
+            "type": "link",
+            "label": "Web",
+            "url": "https://www.google.com/",
+            "regex": ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"]
+        },
+        {
+            "type": "link",
+            "label": "Images",
+            "url": "https://www.google.com/imghp",
+            "regex": ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"]
+        },
+        {
+            "type": "link",
+            "label": "Gmail",
+            "url": "https://mail.google.com/",
+            "regex": ["^https://mail.google.com/.*$"]
+        },
+        {
+            "type": "full_spacer"
+        },
+        {
+            "type": "link",
+            "label": "About",
+            "url": "https://about.google/",
+            "regex": ["^https://about.google/.*$"]
+        },
+        {
+            "type": "link",
+            "label": "Store",
+            "url": "https://store.google.com/",
+            "regex": ["^https://store.google.com/.*$"]
+        },
+        {
+            "type": "menu",
+            "label": "Apps",
+            "icon": "apps",
+            "position": "left",
+            "hover": false,
+            "url": "https://about.google/products/#all-products",
+            "items": [
+                {
+                    "type": "link",
+                    "label": "Translate",
+                    "url": "https://translate.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "YouTube",
+                    "url": "https://www.youtube.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Maps",
+                    "url": "https://maps.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Drive",
+                    "url": "https://drive.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Calendar",
+                    "url": "https://calendar.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "News",
+                    "url": "https://news.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Photos",
+                    "url": "https://photos.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Meet",
+                    "url": "https://meet.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Play",
+                    "url": "https://play.google.com/"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "link",
+                    "label": "Vids",
+                    "url": "https://vids.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Sheets",
+                    "url": "https://sheets.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Docs",
+                    "url": "https://docs.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Slides",
+                    "url": "https://slides.google.com/"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "link",
+                    "label": "More from Google",
+                    "url": "https://about.google/products/#all-products"
+                }
+            ]
+        },
+        {
+            "type": "account_menu",
+            "label": "",
+            "position": "left",
+            "hover": false,
+            "account": true,
+            "profile_picture": true,
+            "url": "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}"
+        },
+        {
+            "type": "link",
+            "label": "<b>Sign in</b>",
+            "account": false,
+            "url": "https://accounts.google.com/ServiceLogin?continue={url}"
+        }
+    ]
+}
