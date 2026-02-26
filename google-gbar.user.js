@@ -1376,7 +1376,8 @@ function validateJson(jsonString) {
   }
 }
 
-async function loadPresets(dropdownElement, codeElement, codeElementDisplay) {
+async function loadPresets(dropdownElement, codeElementEdit, codeElementDisplay) {
+  console.log(codeElementDisplay)
   dropdownElement.querySelectorAll("*:not(.gbar-config-dropdown-spacer#default):not(.gbar-config-dropdown-item#preset)").forEach((element) => {
     element.remove();
   });
@@ -1396,8 +1397,8 @@ async function loadPresets(dropdownElement, codeElement, codeElementDisplay) {
 
       presetElement.addEventListener("click", async function () {
         presetElement.blur();
-        codeElement.value = JSON.stringify(item, null, 2);
-        codeElementDisplay.innerHTML = syntaxHighlight(codeElement.value);
+        codeElementEdit.value = JSON.stringify(item, null, 2);
+        codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
 
         if (!dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
           const deleteElement = document.createElement("button");
@@ -1413,7 +1414,7 @@ async function loadPresets(dropdownElement, codeElement, codeElementDisplay) {
               dropdownElement.querySelector(".gbar-config-dropdown-spacer:not(#default)").remove();
             }
             await GM.setValue("custom-presets", customPresets);
-            loadPresets(dropdownElement, codeElement, codeElementDisplay);
+            loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
           });
           dropdownElement.appendChild(deleteElement);
         }
@@ -1434,14 +1435,14 @@ async function loadPresets(dropdownElement, codeElement, codeElementDisplay) {
         const deleteElement = dropdownElement.querySelector(".gbar-config-dropdown-item#delete");
         deleteElement.remove();
       }
-      codeElement.value = JSON.stringify(item, null, 2);
-      codeElementDisplay.innerHTML = syntaxHighlight(codeElement.value);
+      codeElementEdit.value = JSON.stringify(item, null, 2);
+      codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
       presetElement.blur();
     });
   }
 }
 
-async function saveCustomPreset(json, dropdownElement, codeElement, codeElementDisplay) {
+async function saveCustomPreset(json, dropdownElement, codeElementEdit, codeElementDisplay) {
   let itemAdded = false;
   if (customPresets.length) {
     customPresets.forEach((item) => {
@@ -1456,7 +1457,7 @@ async function saveCustomPreset(json, dropdownElement, codeElement, codeElementD
     customPresets.push(json);
   }
   await GM.setValue("custom-presets", customPresets);
-  await loadPresets(dropdownElement, codeElement, codeElementDisplay);
+  await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
 }
 
 function detectLocation(layout, item) {
@@ -2038,7 +2039,7 @@ async function changeConfig() {
 
     if (jsonValid == true) {
       const json = JSON.parse(codeElementEdit.value);
-      await saveCustomPreset(json, dropdownElement, codeElementEdit);
+      await saveCustomPreset(json, dropdownElement, codeElementEdit, codeElementDisplay);
     } else {
       alert(jsonValid);
     }
