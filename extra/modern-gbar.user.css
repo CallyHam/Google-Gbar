@@ -44,7 +44,8 @@
     [theme="2013"] .gbar-item:hover {
         color: light-dark(#1f1f1f, #e8e8e8) !important;
     }
-    [theme="2013"] .gbar-item.active [theme="2013"] .gbar-item-dropdown.active > .gbar-item {
+    [theme="2013"] .gbar-item.active,
+    [theme="2013"] .gbar-item-dropdown.active > .gbar-item {
         transition: color 0.1s !important;
         color: light-dark(#1f1f1f, #e8e8e8) !important;
         font-weight: 500 !important;
@@ -309,3 +310,4 @@
         margin: 0 5px;
     }
 }
+
