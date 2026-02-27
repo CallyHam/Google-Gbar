@@ -7,7 +7,8 @@
 @author         CallyHam
 @var checkbox darkbar "Dark Bar" 0
 @var checkbox darkmenu "Dark Menu" 0
-@var checkbox noborder "No Border" 0
+@var checkbox noborder "No Border" 1
+@var checkbox bluesignin "Blue Sign in Button" 1
 ==/UserStyle== */
 
 @-moz-document domain("google.com"), domain("youtube.com") {
@@ -40,13 +41,27 @@
         }
     }
     
-    
     if noborder {
         [theme="2013"]#gbar {
             border-bottom: 1px solid transparent !important;
         }
         [theme="2013"] .gbar-item.active::before {
             display: none;
+        }
+    }
+    
+    if bluesignin {
+        [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]::before {
+            background-color: light-dark(#0b57d0, #c0e5fd) !important
+        }
+        [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="] {
+            color: light-dark(#ffffff, #001d35) !important;
+        }
+        [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:hover::before {
+            background-color: light-dark(#1760d2, #b6d9f0) !important
+        }
+        [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
+            background-color: light-dark(#2367d5, #adcfe4) !important
         }
     }
     
@@ -357,17 +372,5 @@
         height: 40px;
         background: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.05));
         margin: auto 5px;
-    }
-    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]::before {
-        background-color: light-dark(#0b57d0, #c0e5fd) !important
-    }
-    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="] {
-        color: light-dark(#ffffff, #001d35) !important;
-    }
-    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:hover::before {
-        background-color: light-dark(#1760d2, #b6d9f0) !important
-    }
-    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
-        background-color: light-dark(#2367d5, #adcfe4) !important
     }
 }
