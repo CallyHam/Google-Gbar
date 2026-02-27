@@ -346,4 +346,16 @@
         background: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.05));
         margin: 0 5px;
     }
+    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]::before {
+        background-color: light-dark(#0b57d0, #c0e5fd) !important
+    }
+    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="] {
+        color: light-dark(#ffffff, #001d35) !important;
+    }
+    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:hover::before {
+        background-color: light-dark(#1760d2, #b6d9f0) !important
+    }
+    [theme="2013"] .gbar-item[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
+        background-color: light-dark(#2367d5, #adcfe4) !important
+    }
 }
