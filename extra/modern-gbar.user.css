@@ -7,6 +7,7 @@
 @author         CallyHam
 @var checkbox darkbar "Dark Bar" 0
 @var checkbox darkmenu "Dark Menu" 0
+@var checkbox noborder "No Border" 0
 ==/UserStyle== */
 
 @-moz-document domain("google.com"), domain("youtube.com") {
@@ -39,11 +40,21 @@
         }
     }
     
+    
+    if noborder {
+        [theme="2013"]#gbar {
+            border-bottom: 1px solid transparent !important;
+        }
+        [theme="2013"] .gbar-item.active::before {
+            display: none;
+        }
+    }
+    
     [theme="2013"]#gbar {
         font-family: "Google Sans", Arial, sans-serif !important;
         background-color: light-dark(#ffffff, #1f1f1f) !important;
-        height: 43px !important;
-        border-bottom: 1px solid light-dark(#dadce0, #444746) !important;
+        height: 50px !important;
+        border-bottom: 1px solid light-dark(#dadce0, #444746);
         padding: 0 8px !important;
     }
     [theme="2013"]#gbar * {
@@ -56,8 +67,8 @@
         background-color: transparent !important;
         font-weight: 500 !important;
         font-size: 14px !important;
-        padding: 0 12px !important;
-        line-height: 42px !important;
+        padding: 0 16px !important;
+        line-height: 50px !important;
     }
     [theme="2013"] .gbar-item:hover {
         color: light-dark(#1f1f1f, #e8e8e8) !important;
@@ -75,7 +86,7 @@
         left: unset;
         bottom: 0;
         background-color: light-dark(#1f1f1f, #e8e8e8) !important;
-        width: calc(100% - 24px);
+        width: calc(100% - 32px);
         height: 3px !important;
     }
     [theme="2013"] .gbar-item:not(.active)::before {
@@ -86,8 +97,8 @@
         top: 5px;
         background-color: transparent;
         width: 100%;
-        height: 32px !important;
-        border-radius: 16px;
+        height: 40px;
+        border-radius: 20px;
         z-index: -1;
     }
     [theme="2013"] .gbar-item:not(.active):hover::before {
@@ -113,7 +124,7 @@
     [theme="2013"] .gbar-item-dropdown:has(.gbar-account-menu) > .gbar-item {
         font-size: 0 !important;
         width: 42px;
-        height: 42px;
+        height: 50px;
         padding: 0 !important;
         border: none !important;
     }
@@ -292,7 +303,7 @@
     }
     [theme="2013"] .gbar-item:has(> .gbar-item-icon) {
         width: 42px;
-        height: 42px;
+        height: 50px;
         padding: 0 !important;
     }
     [theme="2013"] .gbar-item-icon {
