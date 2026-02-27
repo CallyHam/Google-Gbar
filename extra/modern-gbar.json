@@ -132,10 +132,11 @@
         },
         {
             "type": "link",
-            "label": "<b>Sign in</b>",
+            "label": "Sign in",
             "account": false,
             "url": "https://accounts.google.com/ServiceLogin?continue={url}"
         }
     ]
 }
+
 
