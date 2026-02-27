@@ -4,7 +4,7 @@
     "layout": [
         {
             "type": "link",
-            "label": "Web",
+            "label": "All",
             "url": "https://www.google.com/",
             "regex": ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"]
         },
@@ -138,3 +138,4 @@
         }
     ]
 }
+
