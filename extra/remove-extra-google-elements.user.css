@@ -38,7 +38,8 @@
         button.plR5qb,
         div[data-hveid="CA0QBQ"],
         div.YNk70c.EjQTId,
-        div.beZ0tf.O1uzAe > div[jsname="xBNgKe"][role="listitem" ] {
+        div.beZ0tf.O1uzAe > div[jsname="xBNgKe"][role="listitem"],
+        div#eKIzJc {
             display: none !important;
         }
     }
