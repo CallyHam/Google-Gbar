@@ -67,7 +67,7 @@
         background-color: transparent !important;
         font-weight: 500 !important;
         font-size: 14px !important;
-        padding: 0 16px !important;
+        padding: 0 20px !important;
         line-height: 50px !important;
     }
     [theme="2013"] .gbar-item:hover {
@@ -86,7 +86,7 @@
         left: unset;
         bottom: 0;
         background-color: light-dark(#1f1f1f, #e8e8e8) !important;
-        width: calc(100% - 32px);
+        width: calc(100% - 40px);
         height: 3px !important;
     }
     [theme="2013"] .gbar-item:not(.active)::before {
