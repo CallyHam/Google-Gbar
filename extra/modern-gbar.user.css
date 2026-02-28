@@ -52,16 +52,16 @@
     }
 
     if bluesignin {
-        [theme="modern"] .gbar-item:not(.active, :has(> .gbar-item-icon))[href^="https://accounts.google.com/ServiceLogin?continue="]::before {
+        [theme="modern"] .gbar-item:not(.active, :has(+ .gbar-account-menu))[href^="https://accounts.google.com/ServiceLogin?continue="]::before {
             background-color: light-dark(#0b57d0, #c0e5fd) !important;
         }
-        [theme="modern"] .gbar-item:not(.active, :has(> .gbar-item-icon))[href^="https://accounts.google.com/ServiceLogin?continue="] {
+        [theme="modern"] .gbar-item:not(.active, :has(+ .gbar-account-menu))[href^="https://accounts.google.com/ServiceLogin?continue="] {
             color: light-dark(#ffffff, #001d35) !important;
         }
-        [theme="modern"] .gbar-item:not(.active, :has(> .gbar-item-icon))[href^="https://accounts.google.com/ServiceLogin?continue="]:hover::before {
+        [theme="modern"] .gbar-item:not(.active, :has(+ .gbar-account-menu))[href^="https://accounts.google.com/ServiceLogin?continue="]:hover::before {
             background-color: light-dark(#1760d2, #b6d9f0) !important;
         }
-        [theme="modern"] .gbar-item:not(.active, :has(> .gbar-item-icon))[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
+        [theme="modern"] .gbar-item:not(.active, :has(+ .gbar-account-menu))[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
             background-color: light-dark(#2367d5, #adcfe4) !important;
         }
     }
@@ -381,6 +381,13 @@
         border-radius: 16px;
     }
     [theme="modern"] .gbar-item:not(.active)[href^="https://accounts.google.com/ServiceLogin?continue="] {
+        margin-left: 8px;
+    }
+    #gbar-config-background [theme="modern"] .gbar-full-spacer {
+        mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDE3TDE1LjYgMTUuNkwxOC4xNzUgMTNIMTNWMTFIMTguMTc1TDE1LjYgOC40TDE3IDdMMjIgMTJMMTcgMTdaTTcgMTdMMiAxMkw3IDdMOC40IDguNEw1LjgyNSAxMUgxMVYxM0g1LjgyNUw4LjQgMTUuNkw3IDE3WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: light-dark(#70757a, #80868b);
         margin-left: 8px;
     }
 }
