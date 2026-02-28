@@ -29,680 +29,680 @@ let settingsOpen = false;
 
 // Define Presets
 const presets = [
-  {
-    name: "2009",
-    theme: "2009",
-    layout: [
-      {
-        type: "link",
-        label: "Web",
-        url: "https://www.google.com/",
-        regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
-      },
-      {
-        type: "link",
-        label: "Images",
-        url: "https://www.google.com/imghp",
-        regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
-      },
-      {
-        type: "link",
-        label: "Videos",
-        url: "https://www.google.com/videohp",
-        regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
-      },
-      {
-        type: "link",
-        label: "Maps",
-        url: "https://www.google.com/maps",
-        regex: ["^https://www.google.com/maps.*$"],
-      },
-      {
-        type: "link",
-        label: "News",
-        url: "https://news.google.com/",
-        regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
-      },
-      {
-        type: "link",
-        label: "Shopping",
-        url: "https://shopping.google.com/",
-        regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
-      },
-      {
-        type: "link",
-        label: "Gmail",
-        url: "https://mail.google.com/",
-        regex: ["^https://mail.google.com/.*$"],
-      },
-      {
-        type: "menu",
-        label: "more",
-        position: "right",
-        hover: false,
-        url: "https://about.google/products/#all-products",
-        items: [
-          {
-            type: "link",
-            label: "Groups",
-            url: "https://groups.google.com/",
-          },
-          {
-            type: "link",
-            label: "Books",
-            url: "https://books.google.com/",
-          },
-          {
-            type: "link",
-            label: "Scholar",
-            url: "https://scholar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Finance",
-            url: "https://www.google.com/finance/",
-          },
-          {
-            type: "link",
-            label: "Blogs",
-            url: "https://www.blogger.com/about/",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "YouTube",
-            url: "https://www.youtube.com/",
-          },
-          {
-            type: "link",
-            label: "Calendar",
-            url: "https://calendar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Photos",
-            url: "https://photos.google.com/",
-          },
-          {
-            type: "link",
-            label: "Documents",
-            url: "https://docs.google.com/",
-          },
-          {
-            type: "link",
-            label: "Reader",
-            url: "https://web.archive.org/web/2009if_/http://www.google.com/reader/view/?hl=en&tab=wy",
-          },
-          {
-            type: "link",
-            label: "Sites",
-            url: "https://sites.google.com",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "even more »",
-            url: "https://about.google/products/#all-products",
-          },
+    {
+        name: "2009",
+        theme: "2009",
+        layout: [
+            {
+                type: "link",
+                label: "Web",
+                url: "https://www.google.com/",
+                regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
+            },
+            {
+                type: "link",
+                label: "Images",
+                url: "https://www.google.com/imghp",
+                regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
+            },
+            {
+                type: "link",
+                label: "Videos",
+                url: "https://www.google.com/videohp",
+                regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
+            },
+            {
+                type: "link",
+                label: "Maps",
+                url: "https://www.google.com/maps",
+                regex: ["^https://www.google.com/maps.*$"],
+            },
+            {
+                type: "link",
+                label: "News",
+                url: "https://news.google.com/",
+                regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
+            },
+            {
+                type: "link",
+                label: "Shopping",
+                url: "https://shopping.google.com/",
+                regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
+            },
+            {
+                type: "link",
+                label: "Gmail",
+                url: "https://mail.google.com/",
+                regex: ["^https://mail.google.com/.*$"],
+            },
+            {
+                type: "menu",
+                label: "more",
+                position: "right",
+                hover: false,
+                url: "https://about.google/products/#all-products",
+                items: [
+                    {
+                        type: "link",
+                        label: "Groups",
+                        url: "https://groups.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Books",
+                        url: "https://books.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Scholar",
+                        url: "https://scholar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Finance",
+                        url: "https://www.google.com/finance/",
+                    },
+                    {
+                        type: "link",
+                        label: "Blogs",
+                        url: "https://www.blogger.com/about/",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "YouTube",
+                        url: "https://www.youtube.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Calendar",
+                        url: "https://calendar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Photos",
+                        url: "https://photos.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Documents",
+                        url: "https://docs.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Reader",
+                        url: "https://web.archive.org/web/2009if_/http://www.google.com/reader/view/?hl=en&tab=wy",
+                    },
+                    {
+                        type: "link",
+                        label: "Sites",
+                        url: "https://sites.google.com",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "even more »",
+                        url: "https://about.google/products/#all-products",
+                    },
+                ],
+            },
+            {
+                type: "full_spacer",
+            },
+            {
+                type: "link",
+                label: "*{email}",
+                account: true,
+                url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
+            },
+            {
+                type: "spacer",
+                account: true,
+            },
+            {
+                type: "link",
+                label: "iGoogle",
+                url: "https://web.archive.org/web/2009if_/http://www.google.com/ig",
+            },
+            {
+                type: "spacer",
+            },
+            {
+                type: "link",
+                label: "My Account",
+                url: "https://myaccount.google.com/",
+                account: true,
+            },
+            {
+                type: "link",
+                label: "Search settings",
+                url: "https://www.google.com/preferences",
+                account: false,
+            },
+            {
+                type: "spacer",
+            },
+            {
+                type: "link",
+                label: "Sign in",
+                account: false,
+                url: "https://accounts.google.com/ServiceLogin?continue={url}",
+            },
+            {
+                type: "link",
+                label: "Sign out",
+                account: true,
+                url: "https://accounts.google.com/Logout?continue={url}",
+            },
         ],
-      },
-      {
-        type: "full_spacer",
-      },
-      {
-        type: "link",
-        label: "*{email}",
-        account: true,
-        url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
-      },
-      {
-        type: "spacer",
-        account: true,
-      },
-      {
-        type: "link",
-        label: "iGoogle",
-        url: "https://web.archive.org/web/2009if_/http://www.google.com/ig",
-      },
-      {
-        type: "spacer",
-      },
-      {
-        type: "link",
-        label: "My Account",
-        url: "https://myaccount.google.com/",
-        account: true,
-      },
-      {
-        type: "link",
-        label: "Search settings",
-        url: "https://www.google.com/preferences",
-        account: false,
-      },
-      {
-        type: "spacer",
-      },
-      {
-        type: "link",
-        label: "Sign in",
-        account: false,
-        url: "https://accounts.google.com/ServiceLogin?continue={url}",
-      },
-      {
-        type: "link",
-        label: "Sign out",
-        account: true,
-        url: "https://accounts.google.com/Logout?continue={url}",
-      },
-    ],
-  },
-  {
-    name: "2010",
-    theme: "2010",
-    layout: [
-      {
-        type: "link",
-        label: "Web",
-        url: "https://www.google.com/",
-        regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$$"],
-      },
-      {
-        type: "link",
-        label: "Images",
-        url: "https://www.google.com/imghp",
-        regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
-      },
-      {
-        type: "link",
-        label: "Videos",
-        url: "https://www.google.com/videohp",
-        regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
-      },
-      {
-        type: "link",
-        label: "Maps",
-        url: "https://www.google.com/maps",
-        regex: ["^https://www.google.com/maps.*$"],
-      },
-      {
-        type: "link",
-        label: "News",
-        url: "https://news.google.com/",
-        regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
-      },
-      {
-        type: "link",
-        label: "Shopping",
-        url: "https://shopping.google.com/",
-        regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
-      },
-      {
-        type: "link",
-        label: "Gmail",
-        url: "https://mail.google.com/",
-        regex: ["^https://mail.google.com/.*$"],
-      },
-      {
-        type: "menu",
-        label: "more",
-        position: "right",
-        hover: false,
-        url: "https://about.google/products/#all-products",
-        items: [
-          {
-            type: "link",
-            label: "Translate",
-            url: "https://translate.google.com/",
-          },
-          {
-            type: "link",
-            label: "Books",
-            url: "https://books.google.com/",
-          },
-          {
-            type: "link",
-            label: "Finance",
-            url: "https://www.google.com/finance/",
-          },
-          {
-            type: "link",
-            label: "Scholar",
-            url: "https://scholar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Blogs",
-            url: "https://www.blogger.com/about/",
-          },
-          {
-            type: "link",
-            label: "Realtime",
-            url: "http://web.archive.org/web/20110604120222id_/http://www.google.com/realtime",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "YouTube",
-            url: "https://www.youtube.com/",
-          },
-          {
-            type: "link",
-            label: "Calendar",
-            url: "https://calendar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Photos",
-            url: "https://photos.google.com/",
-          },
-          {
-            type: "link",
-            label: "Documents",
-            url: "https://docs.google.com/",
-          },
-          {
-            type: "link",
-            label: "Reader",
-            url: "https://web.archive.org/web/2010if_/http://www.google.com/reader/view/?hl=en&tab=wy",
-          },
-          {
-            type: "link",
-            label: "Sites",
-            url: "https://sites.google.com",
-          },
-          {
-            type: "link",
-            label: "Groups",
-            url: "https://groups.google.com/",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "even more »",
-            url: "https://about.google/products/#all-products",
-          },
+    },
+    {
+        name: "2010",
+        theme: "2010",
+        layout: [
+            {
+                type: "link",
+                label: "Web",
+                url: "https://www.google.com/",
+                regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$$"],
+            },
+            {
+                type: "link",
+                label: "Images",
+                url: "https://www.google.com/imghp",
+                regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
+            },
+            {
+                type: "link",
+                label: "Videos",
+                url: "https://www.google.com/videohp",
+                regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
+            },
+            {
+                type: "link",
+                label: "Maps",
+                url: "https://www.google.com/maps",
+                regex: ["^https://www.google.com/maps.*$"],
+            },
+            {
+                type: "link",
+                label: "News",
+                url: "https://news.google.com/",
+                regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
+            },
+            {
+                type: "link",
+                label: "Shopping",
+                url: "https://shopping.google.com/",
+                regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
+            },
+            {
+                type: "link",
+                label: "Gmail",
+                url: "https://mail.google.com/",
+                regex: ["^https://mail.google.com/.*$"],
+            },
+            {
+                type: "menu",
+                label: "more",
+                position: "right",
+                hover: false,
+                url: "https://about.google/products/#all-products",
+                items: [
+                    {
+                        type: "link",
+                        label: "Translate",
+                        url: "https://translate.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Books",
+                        url: "https://books.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Finance",
+                        url: "https://www.google.com/finance/",
+                    },
+                    {
+                        type: "link",
+                        label: "Scholar",
+                        url: "https://scholar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Blogs",
+                        url: "https://www.blogger.com/about/",
+                    },
+                    {
+                        type: "link",
+                        label: "Realtime",
+                        url: "http://web.archive.org/web/20110604120222id_/http://www.google.com/realtime",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "YouTube",
+                        url: "https://www.youtube.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Calendar",
+                        url: "https://calendar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Photos",
+                        url: "https://photos.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Documents",
+                        url: "https://docs.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Reader",
+                        url: "https://web.archive.org/web/2010if_/http://www.google.com/reader/view/?hl=en&tab=wy",
+                    },
+                    {
+                        type: "link",
+                        label: "Sites",
+                        url: "https://sites.google.com",
+                    },
+                    {
+                        type: "link",
+                        label: "Groups",
+                        url: "https://groups.google.com/",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "even more »",
+                        url: "https://about.google/products/#all-products",
+                    },
+                ],
+            },
+            {
+                type: "full_spacer",
+            },
+            {
+                type: "spacer",
+            },
+            {
+                type: "account_menu",
+                label: "{name}",
+                position: "left",
+                hover: false,
+                account: true,
+                profile_picture: false,
+                url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
+            },
+            {
+                type: "link",
+                label: "<b>Sign in</b>",
+                account: false,
+                url: "https://accounts.google.com/ServiceLogin?continue={url}",
+            },
+            {
+                type: "spacer",
+            },
+            {
+                type: "menu",
+                label: "Settings",
+                icon: "settings",
+                position: "left",
+                hover: false,
+                url: "https://www.google.com/preferences",
+                items: [
+                    {
+                        type: "link",
+                        label: "Search settings",
+                        url: "https://www.google.com/preferences",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "iGoogle",
+                        url: "https://web.archive.org/web/2010if_/https://www.google.com/ig",
+                    },
+                ],
+            },
         ],
-      },
-      {
-        type: "full_spacer",
-      },
-      {
-        type: "spacer",
-      },
-      {
-        type: "account_menu",
-        label: "{name}",
-        position: "left",
-        hover: false,
-        account: true,
-        profile_picture: false,
-        url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
-      },
-      {
-        type: "link",
-        label: "<b>Sign in</b>",
-        account: false,
-        url: "https://accounts.google.com/ServiceLogin?continue={url}",
-      },
-      {
-        type: "spacer",
-      },
-      {
-        type: "menu",
-        label: "Settings",
-        icon: "settings",
-        position: "left",
-        hover: false,
-        url: "https://www.google.com/preferences",
-        items: [
-          {
-            type: "link",
-            label: "Search settings",
-            url: "https://www.google.com/preferences",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "iGoogle",
-            url: "https://web.archive.org/web/2010if_/https://www.google.com/ig",
-          },
+    },
+    {
+        name: "2011",
+        theme: "2011",
+        layout: [
+            {
+                type: "link",
+                label: "Web",
+                url: "https://www.google.com/",
+                regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
+            },
+            {
+                type: "link",
+                label: "Images",
+                url: "https://www.google.com/imghp",
+                regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
+            },
+            {
+                type: "link",
+                label: "Videos",
+                url: "https://www.google.com/videohp",
+                regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
+            },
+            {
+                type: "link",
+                label: "Maps",
+                url: "https://www.google.com/maps",
+                regex: ["^https://www.google.com/maps.*$"],
+            },
+            {
+                type: "link",
+                label: "News",
+                url: "https://news.google.com/",
+                regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
+            },
+            {
+                type: "link",
+                label: "Shopping",
+                url: "https://shopping.google.com/",
+                regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
+            },
+            {
+                type: "link",
+                label: "Gmail",
+                url: "https://mail.google.com/",
+                regex: ["^https://mail.google.com/.*$"],
+            },
+            {
+                type: "menu",
+                label: "More",
+                position: "right",
+                hover: false,
+                url: "https://about.google/products/#all-products",
+                items: [
+                    {
+                        type: "link",
+                        label: "Translate",
+                        url: "https://translate.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Books",
+                        url: "https://books.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Finance",
+                        url: "https://www.google.com/finance/",
+                    },
+                    {
+                        type: "link",
+                        label: "Scholar",
+                        url: "https://scholar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Blogs",
+                        url: "https://www.blogger.com/about/",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "YouTube",
+                        url: "https://www.youtube.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Calendar",
+                        url: "https://calendar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Photos",
+                        url: "https://photos.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Documents",
+                        url: "https://docs.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Sites",
+                        url: "https://sites.google.com",
+                    },
+                    {
+                        type: "link",
+                        label: "Groups",
+                        url: "https://groups.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Reader",
+                        url: "https://web.archive.org/web/2010if_/http://www.google.com/reader/view/?hl=en&tab=wy",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "Even more »",
+                        url: "https://about.google/products/#all-products",
+                    },
+                ],
+            },
+            {
+                type: "full_spacer",
+            },
+            {
+                type: "account_menu",
+                label: "{name}",
+                position: "left",
+                hover: false,
+                account: true,
+                profile_picture: false,
+                url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
+            },
+            {
+                type: "link",
+                label: "<b>Sign in</b>",
+                account: false,
+                url: "https://accounts.google.com/ServiceLogin?continue={url}",
+            },
+            {
+                type: "spacer",
+            },
+            {
+                type: "menu",
+                label: "Settings",
+                icon: "settings",
+                position: "left",
+                hover: false,
+                url: "https://www.google.com/preferences",
+                items: [
+                    {
+                        type: "link",
+                        label: "Search settings",
+                        url: "https://www.google.com/preferences",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "iGoogle",
+                        url: "https://web.archive.org/web/2011if_/http://www.google.com/ig",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "Web History",
+                        url: "https://www.google.com/history",
+                    },
+                ],
+            },
         ],
-      },
-    ],
-  },
-  {
-    name: "2011",
-    theme: "2011",
-    layout: [
-      {
-        type: "link",
-        label: "Web",
-        url: "https://www.google.com/",
-        regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
-      },
-      {
-        type: "link",
-        label: "Images",
-        url: "https://www.google.com/imghp",
-        regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
-      },
-      {
-        type: "link",
-        label: "Videos",
-        url: "https://www.google.com/videohp",
-        regex: ["^https://www.google.com/videohp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=7|(?:\\?|\\&)tbm=vid).*$"],
-      },
-      {
-        type: "link",
-        label: "Maps",
-        url: "https://www.google.com/maps",
-        regex: ["^https://www.google.com/maps.*$"],
-      },
-      {
-        type: "link",
-        label: "News",
-        url: "https://news.google.com/",
-        regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
-      },
-      {
-        type: "link",
-        label: "Shopping",
-        url: "https://shopping.google.com/",
-        regex: ["^https://shopping.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=shop.*$"],
-      },
-      {
-        type: "link",
-        label: "Gmail",
-        url: "https://mail.google.com/",
-        regex: ["^https://mail.google.com/.*$"],
-      },
-      {
-        type: "menu",
-        label: "More",
-        position: "right",
-        hover: false,
-        url: "https://about.google/products/#all-products",
-        items: [
-          {
-            type: "link",
-            label: "Translate",
-            url: "https://translate.google.com/",
-          },
-          {
-            type: "link",
-            label: "Books",
-            url: "https://books.google.com/",
-          },
-          {
-            type: "link",
-            label: "Finance",
-            url: "https://www.google.com/finance/",
-          },
-          {
-            type: "link",
-            label: "Scholar",
-            url: "https://scholar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Blogs",
-            url: "https://www.blogger.com/about/",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "YouTube",
-            url: "https://www.youtube.com/",
-          },
-          {
-            type: "link",
-            label: "Calendar",
-            url: "https://calendar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Photos",
-            url: "https://photos.google.com/",
-          },
-          {
-            type: "link",
-            label: "Documents",
-            url: "https://docs.google.com/",
-          },
-          {
-            type: "link",
-            label: "Sites",
-            url: "https://sites.google.com",
-          },
-          {
-            type: "link",
-            label: "Groups",
-            url: "https://groups.google.com/",
-          },
-          {
-            type: "link",
-            label: "Reader",
-            url: "https://web.archive.org/web/2010if_/http://www.google.com/reader/view/?hl=en&tab=wy",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "Even more »",
-            url: "https://about.google/products/#all-products",
-          },
+    },
+    {
+        name: "2013",
+        theme: "2013",
+        layout: [
+            {
+                type: "link",
+                label: "+{name}",
+                account: true,
+                url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
+            },
+            {
+                type: "link",
+                label: "Sign in",
+                account: false,
+                url: "https://accounts.google.com/ServiceLogin?continue={url}",
+            },
+            {
+                type: "link",
+                label: "Search",
+                url: "https://www.google.com/",
+                regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
+            },
+            {
+                type: "link",
+                label: "Images",
+                url: "https://www.google.com/imghp",
+                regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
+            },
+            {
+                type: "link",
+                label: "Maps",
+                url: "https://www.google.com/maps",
+                regex: ["^https://www.google.com/maps.*$"],
+            },
+            {
+                type: "link",
+                label: "Play",
+                url: "https://play.google.com/",
+                regex: ["^https://play.google.com/.*$"],
+            },
+            {
+                type: "link",
+                label: "YouTube",
+                url: "https://www.youtube.com/",
+                regex: ["^https://.*.youtube.com/.*$"],
+            },
+            {
+                type: "link",
+                label: "News",
+                url: "https://news.google.com/",
+                regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
+            },
+            {
+                type: "link",
+                label: "Gmail",
+                url: "https://mail.google.com/",
+                regex: ["^https://mail.google.com/.*$"],
+            },
+            {
+                type: "link",
+                label: "Drive",
+                url: "https://drive.google.com/",
+                regex: ["^https://drive.google.com/.*$"],
+            },
+            {
+                type: "menu",
+                label: "More",
+                position: "right",
+                hover: false,
+                url: "https://about.google/products/#all-products",
+                items: [
+                    {
+                        type: "link",
+                        label: "Calendar",
+                        url: "https://calendar.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Translate",
+                        url: "https://translate.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Mobile",
+                        url: "https://about.google/products/",
+                    },
+                    {
+                        type: "link",
+                        label: "Books",
+                        url: "https://books.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Offers",
+                        url: "https://pay.google.com/about/",
+                    },
+                    {
+                        type: "link",
+                        label: "Wallet",
+                        url: "https://wallet.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Shopping",
+                        url: "https://shopping.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Blogger",
+                        url: "https://www.blogger.com/about/",
+                    },
+                    {
+                        type: "link",
+                        label: "Reader",
+                        url: "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/",
+                    },
+                    {
+                        type: "link",
+                        label: "Finance",
+                        url: "https://www.google.com/finance/",
+                    },
+                    {
+                        type: "link",
+                        label: "Photos",
+                        url: "https://photos.google.com/",
+                    },
+                    {
+                        type: "link",
+                        label: "Videos",
+                        url: "https://www.google.com/videohp",
+                    },
+                    {
+                        type: "spacer",
+                    },
+                    {
+                        type: "link",
+                        label: "Even more »",
+                        url: "https://about.google/products/#all-products",
+                    },
+                ],
+            },
         ],
-      },
-      {
-        type: "full_spacer",
-      },
-      {
-        type: "account_menu",
-        label: "{name}",
-        position: "left",
-        hover: false,
-        account: true,
-        profile_picture: false,
-        url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
-      },
-      {
-        type: "link",
-        label: "<b>Sign in</b>",
-        account: false,
-        url: "https://accounts.google.com/ServiceLogin?continue={url}",
-      },
-      {
-        type: "spacer",
-      },
-      {
-        type: "menu",
-        label: "Settings",
-        icon: "settings",
-        position: "left",
-        hover: false,
-        url: "https://www.google.com/preferences",
-        items: [
-          {
-            type: "link",
-            label: "Search settings",
-            url: "https://www.google.com/preferences",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "iGoogle",
-            url: "https://web.archive.org/web/2011if_/http://www.google.com/ig",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "Web History",
-            url: "https://www.google.com/history",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: "2013",
-    theme: "2013",
-    layout: [
-      {
-        type: "link",
-        label: "+{name}",
-        account: true,
-        url: "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}",
-      },
-      {
-        type: "link",
-        label: "Sign in",
-        account: false,
-        url: "https://accounts.google.com/ServiceLogin?continue={url}",
-      },
-      {
-        type: "link",
-        label: "Search",
-        url: "https://www.google.com/",
-        regex: ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"],
-      },
-      {
-        type: "link",
-        label: "Images",
-        url: "https://www.google.com/imghp",
-        regex: ["^https://www.google.com/imghp.*$", "^https://www.google.com/search.*(?:(?:\\?|\\&)udm=2|(?:\\?|\\&)tbm=isch).*$"],
-      },
-      {
-        type: "link",
-        label: "Maps",
-        url: "https://www.google.com/maps",
-        regex: ["^https://www.google.com/maps.*$"],
-      },
-      {
-        type: "link",
-        label: "Play",
-        url: "https://play.google.com/",
-        regex: ["^https://play.google.com/.*$"],
-      },
-      {
-        type: "link",
-        label: "YouTube",
-        url: "https://www.youtube.com/",
-        regex: ["^https://.*.youtube.com/.*$"],
-      },
-      {
-        type: "link",
-        label: "News",
-        url: "https://news.google.com/",
-        regex: ["^https://news.google.com/.*$", "^https://www.google.com/search.*(?:\\?|\\&)tbm=nws.*$"],
-      },
-      {
-        type: "link",
-        label: "Gmail",
-        url: "https://mail.google.com/",
-        regex: ["^https://mail.google.com/.*$"],
-      },
-      {
-        type: "link",
-        label: "Drive",
-        url: "https://drive.google.com/",
-        regex: ["^https://drive.google.com/.*$"],
-      },
-      {
-        type: "menu",
-        label: "More",
-        position: "right",
-        hover: false,
-        url: "https://about.google/products/#all-products",
-        items: [
-          {
-            type: "link",
-            label: "Calendar",
-            url: "https://calendar.google.com/",
-          },
-          {
-            type: "link",
-            label: "Translate",
-            url: "https://translate.google.com/",
-          },
-          {
-            type: "link",
-            label: "Mobile",
-            url: "https://about.google/products/",
-          },
-          {
-            type: "link",
-            label: "Books",
-            url: "https://books.google.com/",
-          },
-          {
-            type: "link",
-            label: "Offers",
-            url: "https://pay.google.com/about/",
-          },
-          {
-            type: "link",
-            label: "Wallet",
-            url: "https://wallet.google.com/",
-          },
-          {
-            type: "link",
-            label: "Shopping",
-            url: "https://shopping.google.com/",
-          },
-          {
-            type: "link",
-            label: "Blogger",
-            url: "https://www.blogger.com/about/",
-          },
-          {
-            type: "link",
-            label: "Reader",
-            url: "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/",
-          },
-          {
-            type: "link",
-            label: "Finance",
-            url: "https://www.google.com/finance/",
-          },
-          {
-            type: "link",
-            label: "Photos",
-            url: "https://photos.google.com/",
-          },
-          {
-            type: "link",
-            label: "Videos",
-            url: "https://www.google.com/videohp",
-          },
-          {
-            type: "spacer",
-          },
-          {
-            type: "link",
-            label: "Even more »",
-            url: "https://about.google/products/#all-products",
-          },
-        ],
-      },
-    ],
-  },
+    },
 ];
 
 let customPresets = [];
@@ -1336,367 +1336,367 @@ gBarStyle.textContent = `
 gBar.prepend(gBarStyle);
 
 if (document.querySelector("[href^='https://accounts.google.com/SignOutOptions']")) {
-  const infoElement = document.querySelector("[href^='https://accounts.google.com/SignOutOptions']");
+    const infoElement = document.querySelector("[href^='https://accounts.google.com/SignOutOptions']");
 
-  userInfo = (infoElement.ariaLabel ?? infoElement.title).split(" ").slice(2);
-  userInfo.splice(-2, 1);
-  userInfo = userInfo.join(" ").split("\n");
+    userInfo = (infoElement.ariaLabel ?? infoElement.title).split(" ").slice(2);
+    userInfo.splice(-2, 1);
+    userInfo = userInfo.join(" ").split("\n");
 
-  userEmail = userInfo[1].replace(/\(|\)/g, "");
-  userName = userInfo[0].trim();
-  userPicture = infoElement.querySelector("img").src.replace("s32", "s128");
+    userEmail = userInfo[1].replace(/\(|\)/g, "");
+    userName = userInfo[0].trim();
+    userPicture = infoElement.querySelector("img").src.replace("s32", "s128");
 
-  oldUserEmail = userInfo[1].replace(/\(|\)/g, "");
-  oldUserName = userInfo[0].trim();
-  oldUserPicture = infoElement.querySelector("img").src.replace("s32", "s128");
+    oldUserEmail = userInfo[1].replace(/\(|\)/g, "");
+    oldUserName = userInfo[0].trim();
+    oldUserPicture = infoElement.querySelector("img").src.replace("s32", "s128");
 
-  gBar.style.setProperty("--user-picture", `url(${userPicture})`);
+    gBar.style.setProperty("--user-picture", `url(${userPicture})`);
 
-  oldUserInfo = true;
-  userInfo = true;
+    oldUserInfo = true;
+    userInfo = true;
 } else if (document.getElementById("masthead-expanded-menu-account-container")) {
-  const infoElement = document.getElementById("masthead-expanded-menu-account-container");
+    const infoElement = document.getElementById("masthead-expanded-menu-account-container");
 
-  userEmail = infoElement.querySelector("#masthead-expanded-menu-email").textContent;
-  userName = infoElement.querySelector("#masthead-expanded-menu-account-info > p").textContent;
-  userPicture = infoElement.querySelector("img#masthead-expanded-menu-gaia-photo").src;
+    userEmail = infoElement.querySelector("#masthead-expanded-menu-email").textContent;
+    userName = infoElement.querySelector("#masthead-expanded-menu-account-info > p").textContent;
+    userPicture = infoElement.querySelector("img#masthead-expanded-menu-gaia-photo").src;
 
-  oldUserEmail = infoElement.querySelector("#masthead-expanded-menu-email").textContent;
-  oldUserName = infoElement.querySelector("#masthead-expanded-menu-account-info > p").textContent;
-  oldUserPicture = infoElement.querySelector("img#masthead-expanded-menu-gaia-photo").src;
+    oldUserEmail = infoElement.querySelector("#masthead-expanded-menu-email").textContent;
+    oldUserName = infoElement.querySelector("#masthead-expanded-menu-account-info > p").textContent;
+    oldUserPicture = infoElement.querySelector("img#masthead-expanded-menu-gaia-photo").src;
 
-  gBar.style.setProperty("--user-picture", `url(${userPicture})`);
+    gBar.style.setProperty("--user-picture", `url(${userPicture})`);
 
-  oldUserInfo = true;
-  userInfo = true;
+    oldUserInfo = true;
+    userInfo = true;
 } else {
-  userInfo = false;
+    userInfo = false;
 }
 
 function parseString(string) {
-  if (userInfo) {
-    return string.replaceAll("{email}", userEmail).replaceAll("{name}", userName).replaceAll("{url}", window.location.href).replace("*", "");
-  } else {
-    return string.replaceAll("{email}", "Email").replaceAll("{name}", "Name").replaceAll("{url}", window.location.href).replace("*", "");
-  }
+    if (userInfo) {
+        return string.replaceAll("{email}", userEmail).replaceAll("{name}", userName).replaceAll("{url}", window.location.href).replace("*", "");
+    } else {
+        return string.replaceAll("{email}", "Email").replaceAll("{name}", "Name").replaceAll("{url}", window.location.href).replace("*", "");
+    }
 }
 
 function handleMenuClick(item, e) {
-  const itemLink = item.querySelector(".gbar-item");
+    const itemLink = item.querySelector(".gbar-item");
 
-  if (itemLink == e.target && !item.classList.contains("active")) {
-    e.preventDefault();
-    item.classList.add("active");
-  } else if (item.classList.contains("active") && (!item.contains(e.target) || itemLink == e.target)) {
-    if (itemLink == e.target) {
-      e.preventDefault();
+    if (itemLink == e.target && !item.classList.contains("active")) {
+        e.preventDefault();
+        item.classList.add("active");
+    } else if (item.classList.contains("active") && (!item.contains(e.target) || itemLink == e.target)) {
+        if (itemLink == e.target) {
+            e.preventDefault();
+        }
+        item.classList.remove("active");
     }
-    item.classList.remove("active");
-  }
 }
 
 function placeGBar() {
-  const gplex = document.getElementById("ugf");
-  const v3 = document.getElementById("masthead-positioner");
+    const gplex = document.getElementById("ugf");
+    const v3 = document.getElementById("masthead-positioner");
 
-  if (gplex) {
-    gplex.prepend(gBar);
-  } else if (v3) {
-    v3.prepend(gBar);
-  } else {
-    document.documentElement.prepend(gBar);
-  }
+    if (gplex) {
+        gplex.prepend(gBar);
+    } else if (v3) {
+        v3.prepend(gBar);
+    } else {
+        document.documentElement.prepend(gBar);
+    }
 }
 
 function validateJson(jsonString) {
-  try {
-    JSON.parse(jsonString);
-    return true;
-  } catch (error) {
-    return error;
-  }
+    try {
+        JSON.parse(jsonString);
+        return true;
+    } catch (error) {
+        return error;
+    }
 }
 
 async function loadPresets(dropdownElement, codeElementEdit, codeElementDisplay) {
-  console.log(codeElementDisplay)
-  dropdownElement.querySelectorAll("*:not(.gbar-config-dropdown-spacer#default):not(.gbar-config-dropdown-item#preset)").forEach((element) => {
-    element.remove();
-  });
-
-  customPresets = await GM.getValue("custom-presets", []);
-
-  if (customPresets.length != 0) {
-    const presetSpacer = document.createElement("span");
-    presetSpacer.classList.add("gbar-config-dropdown-spacer");
-    for (let i = customPresets.length - 1; i >= 0; i--) {
-      const item = customPresets[i];
-
-      const presetElement = document.createElement("button");
-      presetElement.classList.add("gbar-config-dropdown-item");
-      presetElement.textContent = item.name;
-      dropdownElement.prepend(presetElement);
-
-      presetElement.addEventListener("click", async function () {
-        presetElement.blur();
-        codeElementEdit.value = JSON.stringify(item, null, 2);
-        codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
-
-        if (!dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
-          const deleteElement = document.createElement("button");
-          deleteElement.classList.add("gbar-config-dropdown-item");
-          deleteElement.id = "delete";
-          deleteElement.textContent = "Delete preset...";
-
-          deleteElement.addEventListener("click", async function () {
-            customPresets.splice(i, 1);
-            presetElement.remove();
-            deleteElement.remove();
-            if (customPresets.length == 0) {
-              dropdownElement.querySelector(".gbar-config-dropdown-spacer:not(#default)").remove();
-            }
-            await GM.setValue("custom-presets", customPresets);
-            loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
-          });
-          dropdownElement.appendChild(deleteElement);
-        }
-      });
-    }
-    dropdownElement.prepend(presetSpacer);
-  }
-
-  for (let i = presets.length - 1; i >= 0; i--) {
-    const item = presets[i];
-    const presetElement = document.createElement("button");
-    presetElement.classList.add("gbar-config-dropdown-item");
-    presetElement.textContent = item.name;
-    dropdownElement.prepend(presetElement);
-
-    presetElement.addEventListener("click", function () {
-      if (dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
-        const deleteElement = dropdownElement.querySelector(".gbar-config-dropdown-item#delete");
-        deleteElement.remove();
-      }
-      codeElementEdit.value = JSON.stringify(item, null, 2);
-      codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
-      presetElement.blur();
+    console.log(codeElementDisplay);
+    dropdownElement.querySelectorAll("*:not(.gbar-config-dropdown-spacer#default):not(.gbar-config-dropdown-item#preset)").forEach((element) => {
+        element.remove();
     });
-  }
+
+    customPresets = await GM.getValue("custom-presets", []);
+
+    if (customPresets.length != 0) {
+        const presetSpacer = document.createElement("span");
+        presetSpacer.classList.add("gbar-config-dropdown-spacer");
+        for (let i = customPresets.length - 1; i >= 0; i--) {
+            const item = customPresets[i];
+
+            const presetElement = document.createElement("button");
+            presetElement.classList.add("gbar-config-dropdown-item");
+            presetElement.textContent = item.name;
+            dropdownElement.prepend(presetElement);
+
+            presetElement.addEventListener("click", async function () {
+                presetElement.blur();
+                codeElementEdit.value = JSON.stringify(item, null, 2);
+                codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+
+                if (!dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
+                    const deleteElement = document.createElement("button");
+                    deleteElement.classList.add("gbar-config-dropdown-item");
+                    deleteElement.id = "delete";
+                    deleteElement.textContent = "Delete preset...";
+
+                    deleteElement.addEventListener("click", async function () {
+                        customPresets.splice(i, 1);
+                        presetElement.remove();
+                        deleteElement.remove();
+                        if (customPresets.length == 0) {
+                            dropdownElement.querySelector(".gbar-config-dropdown-spacer:not(#default)").remove();
+                        }
+                        await GM.setValue("custom-presets", customPresets);
+                        loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
+                    });
+                    dropdownElement.appendChild(deleteElement);
+                }
+            });
+        }
+        dropdownElement.prepend(presetSpacer);
+    }
+
+    for (let i = presets.length - 1; i >= 0; i--) {
+        const item = presets[i];
+        const presetElement = document.createElement("button");
+        presetElement.classList.add("gbar-config-dropdown-item");
+        presetElement.textContent = item.name;
+        dropdownElement.prepend(presetElement);
+
+        presetElement.addEventListener("click", function () {
+            if (dropdownElement.querySelector(".gbar-config-dropdown-item#delete")) {
+                const deleteElement = dropdownElement.querySelector(".gbar-config-dropdown-item#delete");
+                deleteElement.remove();
+            }
+            codeElementEdit.value = JSON.stringify(item, null, 2);
+            codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+            presetElement.blur();
+        });
+    }
 }
 
 async function saveCustomPreset(json, dropdownElement, codeElementEdit, codeElementDisplay) {
-  let itemAdded = false;
-  if (customPresets.length) {
-    customPresets.forEach((item) => {
-      if (item.name == json.name) {
-        customPresets[customPresets.indexOf(item)] = json;
-        itemAdded = true;
-        return;
-      }
-    });
-  }
-  if (itemAdded == false) {
-    customPresets.push(json);
-  }
-  await GM.setValue("custom-presets", customPresets);
-  await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
+    let itemAdded = false;
+    if (customPresets.length) {
+        customPresets.forEach((item) => {
+            if (item.name == json.name) {
+                customPresets[customPresets.indexOf(item)] = json;
+                itemAdded = true;
+                return;
+            }
+        });
+    }
+    if (itemAdded == false) {
+        customPresets.push(json);
+    }
+    await GM.setValue("custom-presets", customPresets);
+    await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
 }
 
 function detectLocation(layout, item) {
-  const layoutArray = layout.map((x) => x);
+    const layoutArray = layout.map((x) => x);
 
-  layoutArray.forEach((element) => {
-    element.score = 0;
-    if (element.type == "link") {
-      if (window.location.href == element.url) {
-        element.score = Infinity;
-      } else if (element.regex) {
-        element.regex.forEach((pattern) => {
-          if (window.location.href.match(pattern)) {
-            element.score += 1;
-          }
-        });
-      }
+    layoutArray.forEach((element) => {
+        element.score = 0;
+        if (element.type == "link") {
+            if (window.location.href == element.url) {
+                element.score = Infinity;
+            } else if (element.regex) {
+                element.regex.forEach((pattern) => {
+                    if (window.location.href.match(pattern)) {
+                        element.score += 1;
+                    }
+                });
+            }
+        }
+    });
+
+    if (layoutArray[item].score == Infinity) {
+        return true;
+    } else if (layoutArray[item].score == Math.max(...layoutArray.map((x) => x.score), 0) && layoutArray[item].score != 0) {
+        return true;
+    } else {
+        return false;
     }
-  });
-
-  if (layoutArray[item].score == Infinity) {
-    return true;
-  } else if (layoutArray[item].score == Math.max(...layoutArray.map((x) => x.score), 0) && layoutArray[item].score != 0) {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 async function loadConfig() {
-  // Get Config
-  const config = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
-  const configJson = JSON.parse(config);
+    // Get Config
+    const config = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
+    const configJson = JSON.parse(config);
 
-  // Reset GBar If Needed
-  document.querySelectorAll("#gbar *:not(style)").forEach((element) => {
-    element.remove();
-  });
+    // Reset GBar If Needed
+    document.querySelectorAll("#gbar *:not(style)").forEach((element) => {
+        element.remove();
+    });
 
-  // Set Theme
-  gBar.setAttribute("theme", configJson.theme);
+    // Set Theme
+    gBar.setAttribute("theme", configJson.theme);
 
-  // Add Items
-  let createdMenus = [];
+    // Add Items
+    let createdMenus = [];
 
-  if (configJson.fake_account) {
-    userInfo = true;
-    userEmail = configJson.fake_account.email;
-    userName = configJson.fake_account.name;
-    userPicture = configJson.fake_account.profile_picture;
-    gBar.style.setProperty("--user-picture", `url(${userPicture})`);
-  } else if (!configJson.fake_account && oldUserInfo) {
-    userInfo = true;
-    userEmail = oldUserEmail;
-    userName = oldUserName;
-    userPicture = oldUserPicture;
-    gBar.style.setProperty("--user-picture", `url(${userPicture})`);
-  } else if (!configJson.fake_account && !oldUserInfo) {
-    userInfo = false;
-  }
+    if (configJson.fake_account) {
+        userInfo = true;
+        userEmail = configJson.fake_account.email;
+        userName = configJson.fake_account.name;
+        userPicture = configJson.fake_account.profile_picture;
+        gBar.style.setProperty("--user-picture", `url(${userPicture})`);
+    } else if (!configJson.fake_account && oldUserInfo) {
+        userInfo = true;
+        userEmail = oldUserEmail;
+        userName = oldUserName;
+        userPicture = oldUserPicture;
+        gBar.style.setProperty("--user-picture", `url(${userPicture})`);
+    } else if (!configJson.fake_account && !oldUserInfo) {
+        userInfo = false;
+    }
 
-  configJson.layout.forEach((item) => {
-    let newElement;
+    configJson.layout.forEach((item) => {
+        let newElement;
 
-    switch (item.type) {
-      case "link": {
-        newElement = document.createElement("a");
-        newElement.classList.add("gbar-item");
-        newElement.innerHTML = parseString(item.label);
-        newElement.href = parseString(item.url);
-        newElement.title = parseString(item.label);
-
-        if (detectLocation(configJson.layout, configJson.layout.indexOf(item)) == true || item.label.startsWith("*")) {
-          newElement.classList.add("active");
-          if (gBar.getAttribute("theme") == "2009") {
-            newElement.removeAttribute("href");
-          }
-        }
-
-        break;
-      }
-      case "spacer": {
-        newElement = document.createElement("div");
-        newElement.classList.add("gbar-spacer");
-        break;
-      }
-      case "full_spacer": {
-        newElement = document.createElement("div");
-        newElement.classList.add("gbar-full-spacer");
-        break;
-      }
-      case "menu": {
-        newElement = document.createElement("div");
-        newElement.classList.add("gbar-item-dropdown");
-
-        let newElementLink = document.createElement("a");
-        newElementLink.classList.add("gbar-item");
-        newElementLink.href = parseString(item.url);
-        newElementLink.title = parseString(item.label);
-        if (item.icon && gBar.getAttribute("theme") != "2009") {
-          let newElementIcon = document.createElement("span");
-          newElementLink.innerHTML = parseString(item.label);
-          newElementIcon.classList.add("gbar-item-icon");
-          newElementIcon.classList.add(item.icon);
-          newElementLink.appendChild(newElementIcon);
-        } else {
-          newElementLink.innerHTML = parseString(item.label);
-        }
-
-        newElement.appendChild(newElementLink);
-
-        let newElementMenu = document.createElement("div");
-        newElementMenu.classList.add("gbar-menu");
-        newElementMenu.classList.add(item.position);
-        newElement.appendChild(newElementMenu);
-
-        item.items.forEach((subitem) => {
-          let newSubElement;
-
-          switch (subitem.type) {
+        switch (item.type) {
             case "link": {
-              newSubElement = document.createElement("a");
-              newSubElement.classList.add("gbar-menu-item");
-              newSubElement.innerHTML = parseString(subitem.label);
-              newSubElement.href = parseString(subitem.url);
-              newSubElement.title = parseString(item.label);
-              break;
+                newElement = document.createElement("a");
+                newElement.classList.add("gbar-item");
+                newElement.innerHTML = parseString(item.label);
+                newElement.href = parseString(item.url);
+                newElement.title = parseString(item.label);
+
+                if (detectLocation(configJson.layout, configJson.layout.indexOf(item)) == true || item.label.startsWith("*")) {
+                    newElement.classList.add("active");
+                    if (gBar.getAttribute("theme") == "2009") {
+                        newElement.removeAttribute("href");
+                    }
+                }
+
+                break;
             }
             case "spacer": {
-              newSubElement = document.createElement("div");
-              newSubElement.classList.add("gbar-menu-spacer");
-              break;
+                newElement = document.createElement("div");
+                newElement.classList.add("gbar-spacer");
+                break;
             }
-            default: {
-              return;
+            case "full_spacer": {
+                newElement = document.createElement("div");
+                newElement.classList.add("gbar-full-spacer");
+                break;
             }
-          }
+            case "menu": {
+                newElement = document.createElement("div");
+                newElement.classList.add("gbar-item-dropdown");
 
-          if ("account" in subitem) {
-            if (subitem.account == true && userInfo == true) {
-              newElementMenu.appendChild(newSubElement);
-            } else if (subitem.account == false && userInfo == false) {
-              newElementMenu.appendChild(newSubElement);
+                let newElementLink = document.createElement("a");
+                newElementLink.classList.add("gbar-item");
+                newElementLink.href = parseString(item.url);
+                newElementLink.title = parseString(item.label);
+                if (item.icon && gBar.getAttribute("theme") != "2009") {
+                    let newElementIcon = document.createElement("span");
+                    newElementLink.innerHTML = parseString(item.label);
+                    newElementIcon.classList.add("gbar-item-icon");
+                    newElementIcon.classList.add(item.icon);
+                    newElementLink.appendChild(newElementIcon);
+                } else {
+                    newElementLink.innerHTML = parseString(item.label);
+                }
+
+                newElement.appendChild(newElementLink);
+
+                let newElementMenu = document.createElement("div");
+                newElementMenu.classList.add("gbar-menu");
+                newElementMenu.classList.add(item.position);
+                newElement.appendChild(newElementMenu);
+
+                item.items.forEach((subitem) => {
+                    let newSubElement;
+
+                    switch (subitem.type) {
+                        case "link": {
+                            newSubElement = document.createElement("a");
+                            newSubElement.classList.add("gbar-menu-item");
+                            newSubElement.innerHTML = parseString(subitem.label);
+                            newSubElement.href = parseString(subitem.url);
+                            newSubElement.title = parseString(subitem.label);
+                            break;
+                        }
+                        case "spacer": {
+                            newSubElement = document.createElement("div");
+                            newSubElement.classList.add("gbar-menu-spacer");
+                            break;
+                        }
+                        default: {
+                            return;
+                        }
+                    }
+
+                    if ("account" in subitem) {
+                        if (subitem.account == true && userInfo == true) {
+                            newElementMenu.appendChild(newSubElement);
+                        } else if (subitem.account == false && userInfo == false) {
+                            newElementMenu.appendChild(newSubElement);
+                        }
+                    } else {
+                        newElementMenu.appendChild(newSubElement);
+                    }
+                });
+
+                if (item.hover == true) {
+                    newElement.addEventListener("mouseenter", function () {
+                        newElement.classList.add("active");
+                    });
+                    newElement.addEventListener("mouseleave", function () {
+                        newElement.classList.remove("active");
+                    });
+                } else {
+                    createdMenus.push(newElement);
+                }
+                break;
             }
-          } else {
-            newElementMenu.appendChild(newSubElement);
-          }
-        });
+            case "account_menu": {
+                newElement = document.createElement("div");
+                newElement.classList.add("gbar-item-dropdown");
 
-        if (item.hover == true) {
-          newElement.addEventListener("mouseenter", function () {
-            newElement.classList.add("active");
-          });
-          newElement.addEventListener("mouseleave", function () {
-            newElement.classList.remove("active");
-          });
-        } else {
-          createdMenus.push(newElement);
-        }
-        break;
-      }
-      case "account_menu": {
-        newElement = document.createElement("div");
-        newElement.classList.add("gbar-item-dropdown");
+                let newElementLink = document.createElement("a");
+                newElementLink.classList.add("gbar-item");
+                newElementLink.href = parseString(item.url);
+                newElementLink.title = parseString(item.label);
+                if (item.icon && gBar.getAttribute("theme") != "2009") {
+                    let newElementIcon = document.createElement("span");
+                    newElementLink.innerHTML = parseString(item.label);
+                    newElementIcon.classList.add("gbar-item-icon");
+                    newElementIcon.classList.add(item.icon);
+                    newElementLink.appendChild(newElementIcon);
+                } else {
+                    newElementLink.innerHTML = parseString(item.label);
+                }
 
-        let newElementLink = document.createElement("a");
-        newElementLink.classList.add("gbar-item");
-        newElementLink.href = parseString(item.url);
-        newElementLink.title = parseString(item.label);
-        if (item.icon && gBar.getAttribute("theme") != "2009") {
-          let newElementIcon = document.createElement("span");
-          newElementLink.innerHTML = parseString(item.label);
-          newElementIcon.classList.add("gbar-item-icon");
-          newElementIcon.classList.add(item.icon);
-          newElementLink.appendChild(newElementIcon);
-        } else {
-          newElementLink.innerHTML = parseString(item.label);
-        }
+                newElement.appendChild(newElementLink);
 
-        newElement.appendChild(newElementLink);
+                let newElementMenu = document.createElement("div");
+                newElementMenu.classList.add("gbar-menu");
+                newElementMenu.classList.add("gbar-account-menu");
+                newElementMenu.classList.add(item.position);
+                newElement.appendChild(newElementMenu);
 
-        let newElementMenu = document.createElement("div");
-        newElementMenu.classList.add("gbar-menu");
-        newElementMenu.classList.add("gbar-account-menu");
-        newElementMenu.classList.add(item.position);
-        newElement.appendChild(newElementMenu);
-
-        switch (gBar.getAttribute("theme")) {
-          case "2009":
-            newElementMenu.innerHTML = `
+                switch (gBar.getAttribute("theme")) {
+                    case "2009":
+                        newElementMenu.innerHTML = `
             <div class="gbar-account-menu-information">
             <span class="gbar-account-menu-email">${userEmail}</span>
             <div class="gbar-menu-spacer"></div>
             <a class="gbar-menu-item" href="https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue=${window.location.href}">Sign in to another account...</a>
             `;
-            break;
-          case "2010":
-            newElementMenu.innerHTML = `
+                        break;
+                    case "2010":
+                        newElementMenu.innerHTML = `
             <div class="gbar-account-menu-information">
               ${item.profile_picture ? `<img src="${userPicture}" class="gbar-account-menu-picture">` : ""}
               <div class="gbar-account-menu-details">
@@ -1715,11 +1715,11 @@ async function loadConfig() {
               <a class="gbar-menu-item" href="https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue=${window.location.href}">Switch account</a>
             </div>
             `;
-            break;
-          case "2011":
-          case "2013":
-          default:
-            newElementMenu.innerHTML = `
+                        break;
+                    case "2011":
+                    case "2013":
+                    default:
+                        newElementMenu.innerHTML = `
             <div class="gbar-account-menu-information">
               ${item.profile_picture ? `<img src="${userPicture}" class="gbar-account-menu-picture">` : ""}
               <div class="gbar-account-menu-details">
@@ -1737,87 +1737,81 @@ async function loadConfig() {
               <a class="gbar-account-menu-button" href="https://accounts.google.com/Logout?continue=${window.location.href}">Sign out</a>
             </div>
             `;
-            break;
+                        break;
+                }
+
+                if (item.hover == true) {
+                    newElement.addEventListener("click", function (event) {
+                        event.preventDefault();
+                    });
+                    newElement.addEventListener("mouseenter", function () {
+                        newElement.classList.add("active");
+                    });
+                    newElement.addEventListener("mouseleave", function () {
+                        newElement.classList.remove("active");
+                    });
+                } else {
+                    createdMenus.push(newElement);
+                }
+                break;
+            }
+            default: {
+                return;
+            }
         }
 
-        if (item.hover == true) {
-          newElement.addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-          newElement.addEventListener("mouseenter", function () {
-            newElement.classList.add("active");
-          });
-          newElement.addEventListener("mouseleave", function () {
-            newElement.classList.remove("active");
-          });
+        if ("account" in item) {
+            if (item.account == true && userInfo == true) {
+                gBar.appendChild(newElement);
+            } else if (item.account == false && userInfo == false) {
+                gBar.appendChild(newElement);
+            }
         } else {
-          createdMenus.push(newElement);
+            gBar.appendChild(newElement);
         }
-        break;
-      }
-      default: {
-        return;
-      }
-    }
-
-    if ("account" in item) {
-      if (item.account == true && userInfo == true) {
-        gBar.appendChild(newElement);
-      } else if (item.account == false && userInfo == false) {
-        gBar.appendChild(newElement);
-      }
-    } else {
-      gBar.appendChild(newElement);
-    }
-  });
-
-  document.addEventListener("click", (e) => {
-    createdMenus.forEach((item) => {
-      handleMenuClick(item, e);
     });
-  });
+
+    document.addEventListener("click", (e) => {
+        createdMenus.forEach((item) => {
+            handleMenuClick(item, e);
+        });
+    });
 }
 
 function syntaxHighlight(json) {
-  if (typeof json != "string") {
-    json = JSON.stringify(json, null, "\t");
-  }
-
-  json = json
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-
-  return json.replace(
-    /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
-    function(match) {
-      var cls = "number";
-      if (/^"/.test(match)) {
-        if (/:$/.test(match)) {
-          cls = "key";
-        } else {
-          cls = "string";
-        }
-      } else if (/true|false/.test(match)) {
-        cls = "boolean";
-      } else if (/null/.test(match)) {
-        cls = "null";
-      }
-      return '<span class="' + cls + '">' + match + "</span>";
+    if (typeof json != "string") {
+        json = JSON.stringify(json, null, "\t");
     }
-  );
+
+    json = json.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = "number";
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = "key";
+            } else {
+                cls = "string";
+            }
+        } else if (/true|false/.test(match)) {
+            cls = "boolean";
+        } else if (/null/.test(match)) {
+            cls = "null";
+        }
+        return '<span class="' + cls + '">' + match + "</span>";
+    });
 }
 
 async function changeConfig() {
-  if (settingsOpen) {
-    return;
-  }
-  settingsOpen = true;
+    if (settingsOpen) {
+        return;
+    }
+    settingsOpen = true;
 
-  const gBarSettings = document.createElement("div");
-  gBarSettings.id = "gbar-config-background";
+    const gBarSettings = document.createElement("div");
+    gBarSettings.id = "gbar-config-background";
 
-  gBarSettings.innerHTML = `
+    gBarSettings.innerHTML = `
   <div id="gbar-config-main">
     <div id="gbar-config-header">
       <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzk4IiBoZWlnaHQ9IjEzNyIgdmlld0JveD0iMCAwIDM5OCAxMzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMjguNTA0IDEwNC45MTNWMTI3LjQ5NkwxMDIuMDM3IDEzMy42MzlDOTEuNTU4NiAxMzUuNjI2IDgxLjM4MTIgMTM2LjY4IDcxLjUwNDkgMTM2LjhDNDYuMjExOSAxMzYuMzE5IDI4LjE0NTUgMTI4Ljc5MSAxNy4zMDU3IDExNC4yMTdDNi4zNDUzOCAxMDAuMTI1IDAuOTI1NDU2IDg1LjMxMSAxLjA0NTkgNjkuNzczOUMxLjE2NjM0IDUxLjE2NTUgNy43NjA1OCAzNS4xNDY2IDIwLjgyODYgMjEuNzE3M0MzMy43NzYyIDguMDQ3MDQgNTIuMDgzNSAxLjAwMTE0IDc1Ljc1MDUgMC41Nzk1OUM4NS44Njc3IDAuNzYwMjU0IDk1LjI5MjMgMi4wODUxMiAxMDQuMDI0IDQuNTU0MkMxMTAuOTUgNi40ODEyOCAxMTYuMzQgOC40OTg3IDEyMC4xOTQgMTAuNjA2NEMxMjMuNzQ3IDEyLjcxNDIgMTI2LjUxNyAxNC40OTA3IDEyOC41MDQgMTUuOTM2TDExMy4xNDggMzAuNTY5OEwxMDYuNjQ0IDMyLjEwNTVMMTExLjI1MSAyNC42OTgyQzEwOS44MDYgMjIuOTUxOCAxMDcuOTY5IDIxLjA4NSAxMDUuNzQxIDE5LjA5NzdDMTAzLjM5MiAxNy4xNzA2IDEwMC42MjIgMTUuMzMzOCA5Ny40MzAyIDEzLjU4NzRDOTQuMzU4OSAxMS42MDAxIDkwLjY1NTMgMTAuMDY0NSA4Ni4zMTkzIDguOTgwNDdDODQuMzMyIDguMzE4MDMgODIuMTAzOCA3LjgwNjE1IDc5LjYzNDggNy40NDQ4MkM3Ny4wNDUyIDcuMzI0MzggNzQuMzk1NSA3LjI2NDE2IDcxLjY4NTUgNy4yNjQxNkM1Ni43NTA3IDcuMzg0NiA0NC42MTYgMTIuMzgzIDM1LjI4MTcgMjIuMjU5M0MyNS41MjU5IDMyLjEzNTYgMjAuNTg3NyA0NS4zMjQxIDIwLjQ2NzMgNjEuODI0N0MyMC41ODc3IDc5LjgzMDkgMjYuNDg5NCA5NS4zNjggMzguMTcyNCAxMDguNDM2QzQ5LjY3NDYgMTIyLjA0NiA2NS42MDMyIDEyOS4wMzIgODUuOTU4IDEyOS4zOTNDOTEuODU5NyAxMjkuMzkzIDk2LjU4NzEgMTI4LjgyMSAxMDAuMTQgMTI3LjY3N0MxMDMuNzUzIDEyNi44MzQgMTA2Ljg1NSAxMjUuODcgMTA5LjQ0NCAxMjQuNzg2Vjk0Ljk3NjZMODEuNTMxNyA5Ni40MjE5TDk2LjI1NTkgODguNDcyN0gxMzUuNTVMMTMwLjY3MiA5My4wNzk2QzEyOS41ODggOTMuODYyNSAxMjguOTg2IDk0Ljg1NjEgMTI4Ljg2NiA5Ni4wNjA1QzEyOC42MjUgOTguODkxIDEyOC41MDQgMTAxLjg0MiAxMjguNTA0IDEwNC45MTNaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMjYyXzIpIi8+CjxwYXRoIGQ9Ik0xODQuODcyIDEzNEgxNDkuMTlDMTUxLjkgMTMxLjQxIDE1My41ODcgMTI5LjM2MyAxNTQuMjQ5IDEyNy44NTdDMTU0LjYxIDEyNi40MTIgMTU0Ljc5MSAxMjQuMjE0IDE1NC43OTEgMTIxLjI2M1YxMTIuNjgyQzE1NC45MTEgOTQuNDM0NiAxNTUuMDkyIDc4LjA1NDQgMTU1LjMzMyA2My41NDFDMTU1LjY5NCA0Ni4yNTc1IDE1Ni4xMTYgMjguMzExNSAxNTYuNTk4IDkuNzAzMTJIMTQzLjEzOEwxNTYuNTk4IDMuMzc5ODhIMTgxLjYyQzE3OC42MDkgNS4wMDU4NiAxNzYuNjgxIDYuNTQxNSAxNzUuODM4IDcuOTg2ODJDMTc0Ljg3NSA5LjYxMjc5IDE3NC4zMzMgMTIuMjAyMyAxNzQuMjEyIDE1Ljc1NTRMMTcyLjY3NyA1NC4wNTYyTDE4NC44NzIgNDkuNjI5OUMxODcuMSA0OS42Mjk5IDE4OS4zODggNDkuNTY5NyAxOTEuNzM3IDQ5LjQ0OTJDMjA2LjU1MSA0OS42OTAxIDIxNy40MjEgNTMuNjk0OCAyMjQuMzQ3IDYxLjQ2MzRDMjMxLjIxMiA2OS4yMzE5IDIzNC42NDUgNzguMzU1NSAyMzQuNjQ1IDg4LjgzNEMyMzQuNjQ1IDk4LjEwODEgMjMyLjA1NSAxMDYuNTA5IDIyNi44NzYgMTE0LjAzN0MyMjEuNTc2IDEyMS41NjQgMjEzLjQ0NyAxMjcuMjg1IDIwMi40ODYgMTMxLjJDMTk1LjkyMiAxMzMuMTg3IDE5MC4wNTEgMTM0LjEyIDE4NC44NzIgMTM0Wk0xNzIuNjc3IDU0Ljg2OTFMMTcyLjQ5NiA3MS42NzA5QzE3Mi4zNzYgODQuNDk4IDE3Mi4zMTUgOTcuMjA0OCAxNzIuMzE1IDEwOS43OTFDMTcyLjMxNSAxMTcuOCAxNzIuNDM2IDEyMi4xMDYgMTcyLjY3NyAxMjIuNzA4QzE3Mi42NzcgMTI0LjU3NSAxNzMuMjQ5IDEyNi4wNTEgMTc0LjM5MyAxMjcuMTM1QzE3NS40NzcgMTI4LjM5OSAxNzguNDI4IDEyOS4wMzIgMTgzLjI0NiAxMjkuMDMyQzE4OC4zMDQgMTI5LjAzMiAxOTIuNDkgMTI4LjU4IDE5NS44MDIgMTI3LjY3N0MyMDAuMjU4IDEyNi4zNTIgMjAzLjk2MiAxMjQuNDU1IDIwNi45MTMgMTIxLjk4NkMyMDkuNjIzIDExOS42MzcgMjExLjczIDExNi45ODcgMjEzLjIzNiAxMTQuMDM3QzIxNC45MjIgMTEwLjk2NSAyMTYuMDM2IDEwNy44MDQgMjE2LjU3OCAxMDQuNTUyQzIxNy4wNiAxMDEuMzYgMjE3LjMwMSA5OC4zNDkgMjE3LjMwMSA5NS41MTg2QzIxNy40MjEgODkuODU3NyAyMTYuMDA2IDgzLjE0MzEgMjEzLjA1NSA3NS4zNzQ1QzIxMS40MjkgNzEuNjQwOCAyMDkuMDIgNjguMTc4MSAyMDUuODI5IDY0Ljk4NjNDMjAyLjc1NyA2MS45MTUgMTk4LjY5MiA1OS40NDYgMTkzLjYzNCA1Ny41NzkxQzE4OS41MzkgNTYuMDEzMyAxODUuODM1IDU1LjExIDE4Mi41MjMgNTQuODY5MUMxNzkuMDkgNTQuNTY4IDE3NS44MDggNTQuNTY4IDE3Mi42NzcgNTQuODY5MVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl8yNjJfMikiLz4KPHBhdGggZD0iTTMwNy42MzMgODAuODg0OEwzMTEuMzM2IDk0LjA3MzJDMzE0LjA0NiAxMDMuNzY5IDMxNi44NzcgMTEyLjMyIDMxOS44MjggMTE5LjcyOEMzMjEuNjk0IDEyNC4wNjMgMzIzLjMyIDEyNy4zNDYgMzI0LjcwNiAxMjkuNTc0QzMyNi4xNTEgMTMxLjgwMiAzMjcuNTY2IDEzMy43NTkgMzI4Ljk1MSAxMzUuNDQ1QzMyNi45NjQgMTM1LjY4NiAzMjUuMTU3IDEzNS44OTcgMzIzLjUzMSAxMzYuMDc4QzMxOS42MTcgMTM1Ljg5NyAzMTUuNzkzIDEzNC43ODMgMzEyLjA1OSAxMzIuNzM1QzMwOS4xMDggMTMwLjg2OCAzMDYuOTEgMTI4Ljg4MSAzMDUuNDY1IDEyNi43NzNDMzAzLjgzOSAxMjQuNjY2IDMwMi42MDQgMTIyLjc2OSAzMDEuNzYxIDEyMS4wODNMMjkyLjk5OSAxMjkuNTc0QzI5MS4zMTMgMTMwLjY1OCAyODguNjAzIDEzMS45NTIgMjg0Ljg2OSAxMzMuNDU4QzI4MS4wNzUgMTM1LjIwNCAyNzYuMjI3IDEzNi4xMzggMjcwLjMyNiAxMzYuMjU4QzI2Mi42NzggMTM2LjEzOCAyNTYuOTg3IDEzNC4xNTEgMjUzLjI1MyAxMzAuMjk2QzI0OS4zMzkgMTI2LjYyMyAyNDcuMzgxIDEyMi4xOTcgMjQ3LjM4MSAxMTcuMDE4QzI0Ny4zODEgMTExLjUzNyAyNDkuMDM3IDEwNi43OCAyNTIuMzUgMTAyLjc0NUMyNTUuNDIxIDk4LjY1MDEgMjU5LjI0NSA5NS4xODczIDI2My44MjIgOTIuMzU2OUMyNjguMzk5IDg5LjQwNjEgMjczLjA5NiA4Ni45OTcyIDI3Ny45MTQgODUuMTMwNEMyODIuNDMgODMuMzIzNyAyODYuMjU0IDgxLjkwODUgMjg5LjM4NiA4MC44ODQ4TDI4Ni41ODUgNzIuNzU0OUMyODMuNzU1IDY0LjM4NDEgMjgwLjQxMyA1OS4yMDUxIDI3Ni41NTkgNTcuMjE3OEMyNzIuNjQ0IDU1LjM1MDkgMjY2LjY4MiA1NC42ODg1IDI1OC42NzMgNTUuMjMwNUwyNzIuMTMyIDQ5LjQ0OTJDMjc2LjM0OCA0OS40NDkyIDI4MC40MTMgNDkuNTY5NyAyODQuMzI3IDQ5LjgxMDVDMjg4LjE4MSA1MC4xNzE5IDI5MS41ODQgNTEuMzQ2MiAyOTQuNTM1IDUzLjMzMzVDMjk3LjcyNiA1NS40NDEyIDMwMC4xOTUgNTguNjAyOSAzMDEuOTQyIDYyLjgxODRDMzAzLjYyOCA2Ny4wOTQxIDMwNS41MjUgNzMuMTE2MiAzMDcuNjMzIDgwLjg4NDhaTTI5NC43MTUgOTkuNTgzNUwyOTIuOTk5IDkzLjI2MDNDMjkyLjE1NiA4OC43NDM3IDI5MC43NDEgODYuNTQ1NiAyODguNzUzIDg2LjY2NkMyODYuMTY0IDg2LjY2NiAyODEuODU4IDg4Ljc0MzcgMjc1LjgzNiA5Mi44OTg5QzI3My4wMDYgOTQuODg2MiAyNzAuNTk3IDk3LjM1NTMgMjY4LjYwOSAxMDAuMzA2QzI2Ni4zODEgMTAzLjI1NyAyNjUuMjY3IDEwNi43MiAyNjUuMjY3IDExMC42OTRDMjY1LjI2NyAxMTMuMjg0IDI2NS44OTkgMTE1LjUxMiAyNjcuMTY0IDExNy4zNzlDMjY4LjI0OCAxMTkuMzA2IDI2OS42NjMgMTIwLjkwMiAyNzEuNDEgMTIyLjE2N0MyNzQuOTYzIDEyNC42MzYgMjc4Ljg0NyAxMjUuODcgMjgzLjA2MiAxMjUuODdDMjg3Ljg4IDEyNS44NyAyOTEuNzY0IDEyNC44NzYgMjk0LjcxNSAxMjIuODg5QzI5Ny40MjUgMTIxLjE0MyAyOTkuMzIyIDExOS42NjcgMzAwLjQwNiAxMTguNDYzQzI5OC42IDExMy43NjYgMjk2LjcwMyAxMDcuNDcyIDI5NC43MTUgOTkuNTgzNVoiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcl8yNjJfMikiLz4KPHBhdGggZD0iTTM3Ni4zNzUgMTI4Ljg1MUwzNjkuNTEgMTM0SDMzNy41MzNDMzM5LjY0IDEzMS4wNDkgMzQwLjkzNSAxMjguNjQgMzQxLjQxNyAxMjYuNzczQzM0MS43NzggMTI0LjkwNyAzNDEuOTU5IDEyMi4yNTcgMzQxLjk1OSAxMTguODI0QzM0Mi4wNzkgOTUuNjM5IDM0Mi4yNiA3NC43NDIyIDM0Mi41MDEgNTYuMTMzOEgzMjguMzE5TDM0MC44NzUgNTAuMTcxOUgzNjMuMjc3QzM2MC45MjkgNTIuNTIwNSAzNTkuNzU0IDU1LjI5MDcgMzU5Ljc1NCA1OC40ODI0VjY0LjI2MzdDMzYxLjIgNjIuNzU4MSAzNjIuOTc2IDYxLjEwMjEgMzY1LjA4NCA1OS4yOTU0QzM2Ny4wNzEgNTcuNTQ5IDM2OS4zNiA1NS45MjMgMzcxLjk0OSA1NC40MTc1QzM3Ny4xMjggNTAuODY0NCAzODMuMzYxIDQ5LjAyNzcgMzkwLjY0OCA0OC45MDcyQzM5Mi41MTUgNDguOTA3MiAzOTMuOTMgNDkuMDI3NyAzOTQuODk0IDQ5LjI2ODZDMzk1LjczNyA0OS42Mjk5IDM5Ni41NSA0OS45OTEyIDM5Ny4zMzMgNTAuMzUyNUwzODkuNzQ1IDY5LjIzMTlMMzg0LjUwNSA3Mi4yMTI5TDM4Ni4wNDEgNjMuMzYwNEMzODUuMjU4IDYyLjg3ODYgMzg0LjQ0NSA2Mi40MjY5IDM4My42MDIgNjIuMDA1NEMzODIuNzU5IDYxLjc2NDUgMzgxLjQwNCA2MS42NDQgMzc5LjUzNyA2MS42NDRDMzc2LjIyNSA2MS42NDQgMzcyLjg4MyA2Mi41MTczIDM2OS41MSA2NC4yNjM3QzM2Ni4xOTggNjYuMjUxIDM2Mi45NDYgNjkuNTAyOSAzNTkuNzU0IDc0LjAxOTVMMzU5LjM5MyAxMjAuNTQxQzM1OS4zOTMgMTIzLjg1MyAzNTkuOTk1IDEyNS45MyAzNjEuMiAxMjYuNzczQzM2Mi4zNDQgMTI3Ljc5NyAzNjQuMTUxIDEyOC4zNjkgMzY2LjYyIDEyOC40OUwzNzYuMzc1IDEyOC44NTFaIiBmaWxsPSJ1cmwoI3BhaW50M19saW5lYXJfMjYyXzIpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMjYyXzIiIHgxPSIxOTUiIHkxPSIwLjUwMDAwMSIgeDI9IjE5NSIgeTI9IjEzNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMTk2RUVGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzEwNjRFNSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXJfMjYyXzIiIHgxPSIxOTUiIHkxPSIzIiB4Mj0iMTk1IiB5Mj0iMTM0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNERTU3NDQiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDEzRDI5Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhcl8yNjJfMiIgeDE9IjE5NSIgeTE9IjQ4LjUiIHgyPSIxOTUiIHkyPSIxMzQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0ZGQkYxQSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkIzMDAiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDNfbGluZWFyXzI2Ml8yIiB4MT0iMTk1IiB5MT0iNDQuNSIgeDI9IjE5NSIgeTI9IjEzNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMEFBNTYxIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwOTE0QiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=" id="gbar-config-header-logo" />
@@ -2070,68 +2064,68 @@ async function changeConfig() {
   </style>
   `;
 
-  const codeElementEdit = gBarSettings.querySelector("#gbar-config-code-edit");
-  const codeElementDisplay = gBarSettings.querySelector("#gbar-config-code-display");
-  codeElementEdit.value = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
-  codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+    const codeElementEdit = gBarSettings.querySelector("#gbar-config-code-edit");
+    const codeElementDisplay = gBarSettings.querySelector("#gbar-config-code-display");
+    codeElementEdit.value = await GM.getValue("config", JSON.stringify(presets[0], null, 2));
+    codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
 
-  codeElementEdit.addEventListener("input", () => {
-      codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
-  })
+    codeElementEdit.addEventListener("input", () => {
+        codeElementDisplay.innerHTML = syntaxHighlight(codeElementEdit.value);
+    });
 
-  const dropdownElement = gBarSettings.querySelector("#gbar-config-dropdown-items");
+    const dropdownElement = gBarSettings.querySelector("#gbar-config-dropdown-items");
 
-  await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
+    await loadPresets(dropdownElement, codeElementEdit, codeElementDisplay);
 
-  const savePresetElement = gBarSettings.querySelector(".gbar-config-dropdown-item#preset");
+    const savePresetElement = gBarSettings.querySelector(".gbar-config-dropdown-item#preset");
 
-  savePresetElement.addEventListener("click", async function () {
-    const jsonValid = validateJson(codeElementEdit.value);
+    savePresetElement.addEventListener("click", async function () {
+        const jsonValid = validateJson(codeElementEdit.value);
 
-    if (jsonValid == true) {
-      const json = JSON.parse(codeElementEdit.value);
-      await saveCustomPreset(json, dropdownElement, codeElementEdit, codeElementDisplay);
-    } else {
-      alert(jsonValid);
-    }
+        if (jsonValid == true) {
+            const json = JSON.parse(codeElementEdit.value);
+            await saveCustomPreset(json, dropdownElement, codeElementEdit, codeElementDisplay);
+        } else {
+            alert(jsonValid);
+        }
 
-    savePresetElement.blur();
-  });
+        savePresetElement.blur();
+    });
 
-  gBarSettings.querySelector(".gbar-config-button#apply").addEventListener("click", async function () {
-    const jsonValid = validateJson(codeElementEdit.value);
+    gBarSettings.querySelector(".gbar-config-button#apply").addEventListener("click", async function () {
+        const jsonValid = validateJson(codeElementEdit.value);
 
-    if (jsonValid == true) {
-      await GM.setValue("config", codeElementEdit.value);
-      loadConfig();
-    } else {
-      alert(jsonValid);
-    }
-  });
+        if (jsonValid == true) {
+            await GM.setValue("config", codeElementEdit.value);
+            loadConfig();
+        } else {
+            alert(jsonValid);
+        }
+    });
 
-  codeElementEdit.addEventListener("keydown", async (e) => {
-    if (e.ctrlKey && e.key === "s") {
-      e.preventDefault();
-      const jsonValid = validateJson(codeElementEdit.value);
+    codeElementEdit.addEventListener("keydown", async (e) => {
+        if (e.ctrlKey && e.key === "s") {
+            e.preventDefault();
+            const jsonValid = validateJson(codeElementEdit.value);
 
-      if (jsonValid == true) {
-        await GM.setValue("config", codeElementEdit.value);
-        loadConfig();
-      } else {
-        alert(jsonValid);
-      }
-    }
-  });
+            if (jsonValid == true) {
+                await GM.setValue("config", codeElementEdit.value);
+                loadConfig();
+            } else {
+                alert(jsonValid);
+            }
+        }
+    });
 
-  gBarSettings.querySelector(".gbar-config-button#cancel").addEventListener("click", function () {
-    placeGBar();
-    gBarSettings.remove();
+    gBarSettings.querySelector(".gbar-config-button#cancel").addEventListener("click", function () {
+        placeGBar();
+        gBarSettings.remove();
 
-    settingsOpen = false;
-  });
+        settingsOpen = false;
+    });
 
-  gBarSettings.querySelector("#gbar-config-content").prepend(gBar);
-  document.documentElement.prepend(gBarSettings);
+    gBarSettings.querySelector("#gbar-config-content").prepend(gBar);
+    document.documentElement.prepend(gBarSettings);
 }
 
 loadConfig();
