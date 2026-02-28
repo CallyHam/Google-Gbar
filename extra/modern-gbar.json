@@ -1,6 +1,6 @@
 {
     "name": "Modern",
-    "theme": "2013",
+    "theme": "modern",
     "layout": [
         {
             "type": "link",
@@ -123,7 +123,8 @@
         },
         {
             "type": "account_menu",
-            "label": "",
+            "label": "Google Account",
+            "icon": "userpicture",
             "position": "left",
             "hover": false,
             "account": true,
@@ -138,5 +139,3 @@
         }
     ]
 }
-
-

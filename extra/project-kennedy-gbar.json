@@ -1,155 +1,144 @@
 {
-  "name": "Project Kennedy",
-  "theme": "2013",
-  "layout": [
-    {
-      "type": "full_spacer"
-    },
-    {
-      "type": "link",
-      "label": "",
-      "url": "https://mail.google.com/",
-      "regex": [
-        "^https://mail.google.com/.*$"
-      ]
-    },
-    {
-      "type": "link",
-      "label": "",
-      "url": "https://calendar.google.com/",
-      "regex": [
-        "^https://calendar.google.com/.*$"
-      ]
-    },
-    {
-      "type": "link",
-      "label": "Search",
-      "url": "https://www.google.com/",
-      "regex": [
-        "^https://www.google.com/webhp.*$",
-        "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"
-      ]
-    },
-    {
-      "type": "link",
-      "label": "Maps",
-      "url": "https://www.google.com/maps",
-      "regex": [
-        "^https://www.google.com/maps.*$"
-      ]
-    },
-    {
-      "type": "link",
-      "label": "Reader",
-      "url": "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/"
-    },
-    {
-      "type": "link",
-      "label": "Docs",
-      "url": "https://docs.google.com/",
-      "regex": [
-        "^https://docs.google.com/.*$"
-      ]
-    },
-    {
-      "type": "menu",
-      "label": "More",
-      "position": "center",
-      "hover": true,
-      "url": "https://about.google/products/#all-products",
-      "items": [
+    "name": "Project Kennedy",
+    "theme": "kennedy",
+    "layout": [
         {
-          "type": "link",
-          "label": "Translate",
-          "url": "https://translate.google.com/"
+            "type": "full_spacer"
         },
         {
-          "type": "link",
-          "label": "Mobile",
-          "url": "https://about.google/products/"
+            "type": "link",
+            "label": "",
+            "url": "https://mail.google.com/",
+            "regex": ["^https://mail.google.com/.*$"]
         },
         {
-          "type": "link",
-          "label": "Books",
-          "url": "https://books.google.com/"
+            "type": "link",
+            "label": "",
+            "url": "https://calendar.google.com/",
+            "regex": ["^https://calendar.google.com/.*$"]
         },
         {
-          "type": "link",
-          "label": "Offers",
-          "url": "https://pay.google.com/about/"
+            "type": "link",
+            "label": "Search",
+            "url": "https://www.google.com/",
+            "regex": ["^https://www.google.com/webhp.*$", "^https://www.google.com/search(?!.*(?:(?:\\?|\\&)tbm|(?:\\?|\\&)udm)=).*$"]
         },
         {
-          "type": "link",
-          "label": "Wallet",
-          "url": "https://wallet.google.com/"
+            "type": "link",
+            "label": "Maps",
+            "url": "https://www.google.com/maps",
+            "regex": ["^https://www.google.com/maps.*$"]
         },
         {
-          "type": "link",
-          "label": "Shopping",
-          "url": "https://shopping.google.com/"
+            "type": "link",
+            "label": "Reader",
+            "url": "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/"
         },
         {
-          "type": "link",
-          "label": "YouTube",
-          "url": "https://www.youtube.com/"
+            "type": "link",
+            "label": "Docs",
+            "url": "https://docs.google.com/",
+            "regex": ["^https://docs.google.com/.*$"]
         },
         {
-          "type": "link",
-          "label": "Blogger",
-          "url": "https://www.blogger.com/about/"
+            "type": "menu",
+            "label": "More",
+            "position": "center",
+            "hover": true,
+            "url": "https://about.google/products/#all-products",
+            "items": [
+                {
+                    "type": "link",
+                    "label": "Translate",
+                    "url": "https://translate.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Mobile",
+                    "url": "https://about.google/products/"
+                },
+                {
+                    "type": "link",
+                    "label": "Books",
+                    "url": "https://books.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Offers",
+                    "url": "https://pay.google.com/about/"
+                },
+                {
+                    "type": "link",
+                    "label": "Wallet",
+                    "url": "https://wallet.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Shopping",
+                    "url": "https://shopping.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "YouTube",
+                    "url": "https://www.youtube.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Blogger",
+                    "url": "https://www.blogger.com/about/"
+                },
+                {
+                    "type": "link",
+                    "label": "Reader",
+                    "url": "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/"
+                },
+                {
+                    "type": "link",
+                    "label": "Finance",
+                    "url": "https://www.google.com/finance/"
+                },
+                {
+                    "type": "link",
+                    "label": "Photos",
+                    "url": "https://photos.google.com/"
+                },
+                {
+                    "type": "link",
+                    "label": "Videos",
+                    "url": "https://www.google.com/videohp"
+                },
+                {
+                    "type": "spacer"
+                },
+                {
+                    "type": "link",
+                    "label": "Even more",
+                    "url": "https://about.google/products/#all-products"
+                }
+            ]
         },
         {
-          "type": "link",
-          "label": "Reader",
-          "url": "https://web.archive.org/web/2013if_/http://www.google.com/reader/about/"
+            "type": "link",
+            "label": "Share",
+            "url": "https://web.archive.org/web/2013if_/plus.google.com"
         },
         {
-          "type": "link",
-          "label": "Finance",
-          "url": "https://www.google.com/finance/"
+            "type": "link",
+            "label": "Sign in",
+            "account": false,
+            "url": "https://accounts.google.com/ServiceLogin?continue={url}"
         },
         {
-          "type": "link",
-          "label": "Photos",
-          "url": "https://photos.google.com/"
+            "type": "account_menu",
+            "label": "{name}",
+            "account": true,
+            "profile_picture": true,
+            "position": "left",
+            "hover": true,
+            "url": "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}"
         },
         {
-          "type": "link",
-          "label": "Videos",
-          "url": "https://www.google.com/videohp"
-        },
-        {
-          "type": "spacer"
-        },
-        {
-          "type": "link",
-          "label": "Even more",
-          "url": "https://about.google/products/#all-products"
+            "type": "full_spacer"
         }
-      ]
-    },
-    {
-      "type": "link",
-      "label": "Share",
-      "url": "https://web.archive.org/web/2013if_/plus.google.com"
-    },
-    {
-      "type": "link",
-      "label": "Sign in",
-      "account": false,
-      "url": "https://accounts.google.com/ServiceLogin?continue={url}"
-    },
-    {
-      "type": "account_menu",
-      "label": "{name}",
-      "account": true,
-      "profile_picture": true,
-      "position": "left",
-      "hover": true,
-      "url": "https://accounts.google.com/ServiceLogin?continue=https://accounts.google.com/SignOutOptions?continue={url}"
-    },
-    {
-      "type": "full_spacer"
-    }
-  ]
+    ]
 }

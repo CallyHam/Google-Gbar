@@ -8,217 +8,245 @@
 ==/UserStyle== */
 
 @-moz-document domain("google.com"), domain("youtube.com") {
-  [theme="2013"]#gbar {
-    background-color: #2d2d2d !important;
-    height: 45px !important;
-    border: none !important;
-  }
-  [theme="2013"] .gbar-item {
-    font-weight: normal !important;
-    line-height: 45px !important;
-    color: #626262 !important;
-    padding: 0 25px !important;
-  }
-  [theme="2013"] .gbar-item.active::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    translate: -50% 0;
-    border-top: 7px solid #2d2d2d;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    z-index: -1;
-  }
-  [theme="2013"] .gbar-item[href*="https://web.archive.org/web/2013if_/plus.google.com"]::after
-  {
-    content: "";
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUgMEgzVjNIMFY1SDNWOEg1VjVIOFYzSDVWMFoiIGZpbGw9IiM2MjYyNjIiLz4KPC9zdmc+Cg");
-    margin-left: 8px;
-  }
-  [theme="2013"] .gbar-item[href="https://web.archive.org/web/2013if_/plus.google.com"]:hover::after
-  {
-    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUgMEgzVjNIMFY1SDNWOEg1VjVIOFYzSDVWMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo");
-  }
-  [theme="2013"] .gbar-full-spacer {
-    visibility: hidden !important;
-  }
-  [theme="2013"] .gbar-item[href="https://mail.google.com/"]
-  {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAo9JREFUeJxNUs1rE0EU35k0iV21bWzsh6VNtp+IImrBg4r2IB6EomIpCIIgevAggoK2WqOtFCl4FFGkPejJk/4BQsGi4k0t1NJUYj5qu2maNJvsZtPdmefszCY685jZnXm/9/u99waf7T+8dH4wPf2ibOZNI2sUM7qmFvKr+Vwqt5HYWI+tq7/U1ejayuKf5EIqPp+IfYs+iXw/PTB46CCebNntse3Cu/fpice0aEgSgMQWbtUB/JBtRsl8+sz+MOu17Ui9jGsxEv7lH/PqyMjW7wR3dUycu2EASDJljE+RxagIrRomdq/4JOp65s6oMfdJwAUe+If1+avxaAoyGeZrUrpQ1DcsCwsSr6JUSbTnL7VXMwJFOdSceWNOvwZ+W7Dtn7JsEMKcsdDg6+8PREaRLAsV5uzHzbEJquug6/rDya25LyCkIhQbPANdigiEJaEQaE1vT2By3BPuEInY8UT+1j3t9n2SSDm/QOM7d6SHL6D2NoZAzCSEK+WkQAlqDDRMPPCfPO5W2DCgVGJ7mZDlTqVwcUiqr3OQkmOObHCpKeV4Sol85ZJ89XK1SQXbWjpxzD41IDicQxeN3JwlWhngLN6jR2ojd2Gbbw3h2NA5aW8vVJvttoApB1d2ubzl0ILA0rymLZul/M3r1o1rKBj8124EjJIQwmVXCpbNZjkrsSwrmUyupFZaW5paO8M9+/q6uzo8Hg8VtFRi6KJWFLS4khslQHK5zWh0mUVVlLAsy7zNtKGh7sD+vuCugMRrJYIgrh4b1EmH2CQei6tquq2tpbm5CTuCiPtGGAnGodCenu5wjdcrHpzTPMY8lsnqlJqm6fN5Q6F2v98vCOG/ISq5Xa7t7VaCjY4ES4K3FP8F7knkfI70EigAAAAASUVORK5CYII=");
-  }
-  [theme="2013"] .gbar-item[href="https://calendar.google.com/"]
-  {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAilJREFUeJx1U81rE1EQf7vvJRt2UytUbFpPwYJIiR5ERWJVEEFE8KK3HnqoIIgg4kHoQfwLVBTEi1I8CB7spWBAEKwexIOJH00OKQg5RM1Nkk022c0b533tblHfSybz5s283/xmJuzQqYszFx5b1OMAXHxxoyRSESrq0gJyEaUSQqL2e4aRdsZDA54h7BHqkf8vCH3CXKXTQplZ1JUQJGjX+t/fTh69RkD6/St42HhKZxbsqZI6MgEpPpAtHMxMH+BchkH6geSdXOkqF5egbIxz7Se2vJGaEEIKwuatvxZTbHEpJ3QrToWl2XCt6uA578CZ/UO0VjYz3cBSLsRIxiFGFvL0vsHi4b7nwMtqFmGvnOwXdvCfv+278/3lVXd79QCRDTEgbhaOFUdrn3OLRwZIIe/w8t7wxguv2aHPL3ePz0UbTZYugk5bHbsB3FnPl/aEylLcNUZlq0MRZKtjT0/ydM4g0+bxYykCcjB04aUzGAQtQaYdVxJ0UU2zwA8sVJB/b0DyOTBRSaYJ56QjRjZ/2Viqs/OjaovN7eb3X5PZnVRPgdym2vGrkDQDfx++cW6dC5bKoyfvWK1Wv7l0InZuNOpJn2POtRY9/2BC9fxTi156hPMb+e2v0bAXe9Y/Vl6trqQ4E2LYaJuulI7sxp6bH9Yrz27LIRn1rIy3veA6jOjIL4gpWYwVpooUwf7GdXfhHsanIJNM/B/foqEv/8I45WPkidnG938AGNOfM62IkOsAAAAASUVORK5CYII=");
-  }
-  [theme="2013"] .gbar-item[href="https://mail.google.com/"],
-  [theme="2013"] .gbar-item[href="https://calendar.google.com/"]
-  {
-    width: 20px;
-    height: 100%;
-    background-size: 20px auto;
-    background-repeat: no-repeat;
-    background-position: 25px center;
-    padding: 0 25px !important;
-    margin-right: 22px;
-  }
-  [theme="2013"] .gbar-item[href="https://calendar.google.com/"]::before ,
-  [theme="2013"] .gbar-item[href="https://mail.google.com/"]::before
-  {
-    position: absolute;
-    left: 53px;
-    content: "0";
-    color: #dc493f;
-  }
-  [theme="2013"] .gbar-item-dropdown.active > .gbar-item {
-    background-color: transparent !important;
-    font-weight: normal !important;
-    line-height: 45px !important;
-    color: #fff !important;
-    border: none !important;
-    padding: 0 25px !important;
-  }
-  [theme="2013"] .gbar-item-dropdown.active > .gbar-item::after {
-    border-top: 4px solid #fff !important;
-  }
-  [theme="2013"] .gbar-item-dropdown.active > .gbar-item::before {
-    content: "";
-    position: absolute;
-    top: calc(100% - 7px);
-    left: 50%;
-    translate: calc(-50% - 7px) 0;
-    border-bottom: 7px solid #fff;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-  }
-  [theme="2013"] .gbar-item-dropdown > .gbar-item::after {
-    border-top: 4px solid #626262 !important;
-    border-left: 4px solid transparent !important;
-    border-right: 4px solid transparent !important;
-    margin-left: 8px !important;
-    margin-bottom: 0 !important;
-  }
-  [theme="2013"] .gbar-item-dropdown > .gbar-item:hover::after {
-    border-top: 4px solid #fff !important;
-  }
-  [theme="2013"] .gbar-item-dropdown:has(.gbar-account-menu),
-  [theme="2013"] .gbar-item[href*="https://accounts.google.com/ServiceLogin"]:not(.gbar-item-dropdown > .gbar-item)
-  {
-    position: absolute;
-    right: 0px;
-    margin-right: 54px !important;
-  }
-  [theme="2013"] .gbar-item-dropdown.active:has(.gbar-account-menu) > .gbar-item::before {
-    translate: calc(-50% - 7px + 25px - 6px) 0 !important;
-  }
-  [theme="2013"] .gbar-item-dropdown:has(.gbar-account-menu) > .gbar-item {
-    padding: 0 25px 0 63px !important;
-  }
-  [theme="2013"] .gbar-item-dropdown:has(.gbar-account-menu)::before {
-    background-image: var(--user-picture);
-    background-size: 100%;
-    position: relative;
-    content: "";
-    display: inline-block;
-    top: 8px;
-    left: 51px;
-    width: 24px;
-    height: 24px;
-    border: 1px solid #393939;
-  }
-  [theme="2013"] .gbar-spacer {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  [theme="2013"] .gbar-menu {
-    border: 1px solid rgba(0, 0, 0, 0.25) !important;
-    top: calc(100% - 1px) !important;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) !important;
-    padding: 10px 0 !important;
-    background-color: #fff;
-  }
-  [theme="2013"] .gbar-menu.left {
-    right: 25px;
-  }
-  [theme="2013"] .gbar-menu.center {
-    left: 5px;
-    translate: none !important;
-  }
-  [theme="2013"] .gbar-menu.right {
-    left: 25px;
-  }
-  [theme="2013"] .gbar-menu-item {
-    background-color: #fff;
-    color: #b2b2b2 !important;
-    font-weight: normal !important;
-    height: 35px !important;
-    line-height: 35px !important;
-    padding: 0 35px 0 20px !important;
-  }
-  [theme="2013"] .gbar-menu-item:hover {
-    color: #595959 !important;
-    background-color: #f6f6f6 !important;
-  }
-  [theme="2013"] .gbar-menu-spacer {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    margin: 10px 0 !important;
-  }
-  [theme="2013"] .gbar-account-menu {
-    padding: 0 !important;
-  }
-  [theme="2013"] .gbar-account-menu-information {
-    padding: 16px 48px 12px 12px !important;
-  }
-  [theme="2013"] .gbar-account-menu-picture {
-    border: 1px solid rgba(0, 0, 0, 0.12);
-  }
-  [theme="2013"] .gbar-account-menu-name {
-    color: #595959 !important;
-    font-weight: normal;
-  }
-  [theme="2013"] .gbar-account-menu-email {
-    color: #b2b2b2 !important;
-    font-weight: normal !important;
-  }
-  [theme="2013"] .gbar-account-menu-link {
-    color: #4e8df8 !important;
-    font-weight: normal !important;
-  }
-  [theme="2013"] .gbar-account-menu-buttons {
-    height: 54px;
-    padding: 0 12px;
-    background: #fff;
-    box-shadow: none;
-    border-top: 1px solid #ebebeb;
-  }
-  [theme="2013"] .gbar-account-menu-button {
-    color: #6d6d6d;
-    background: #f1f1f1;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-sizing: border-box;
-    border-radius: 3px;
-    padding: 0 14px;
-    height: 30px;
-    line-height: 28px;
-    font-weight: normal;
-    box-shadow: none !important;
-  }
-  [theme="2013"] .gbar-account-menu-button:hover {
-    color: #595959;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
-  [theme="2013"] .gbar-account-menu-button:active,
-  [theme="2013"] .gbar-account-menu-button:focus {
-    color: #595959;
-    background: #e5e5e5;
-    border: 1px solid #d7d7d7;
-  }
-  [theme="2013"] .gbar-account-menu-button[href*="https://accounts.google.com/Logout"]
-  {
-    color: #fff !important;
-    background: #dd4b39 !important;
-    border: 1px solid transparent !important;
-  }
+    [theme="kennedy"]#gbar {
+        background-color: #2d2d2d;
+        height: 45px;
+        border: none;
+    }
+    [theme="kennedy"] .gbar-item {
+        font-weight: normal;
+        line-height: 45px;
+        color: #626262;
+        padding: 0 25px;
+        text-decoration: none;
+    }
+    [theme="kennedy"] .gbar-item.active,
+    [theme="kennedy"] .gbar-item:hover {
+        color: #fff;
+    }
+    [theme="kennedy"] .gbar-item.active::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50% 0;
+        border-top: 7px solid #2d2d2d;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        z-index: -1;
+    }
+    [theme="kennedy"] .gbar-item[href*="https://web.archive.org/web/2013if_/plus.google.com"]::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUgMEgzVjNIMFY1SDNWOEg1VjVIOFYzSDVWMFoiIGZpbGw9IiM2MjYyNjIiLz4KPC9zdmc+Cg");
+        margin-left: 8px;
+    }
+    [theme="kennedy"] .gbar-item[href="https://web.archive.org/web/2013if_/plus.google.com"]:hover::after {
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUgMEgzVjNIMFY1SDNWOEg1VjVIOFYzSDVWMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo");
+    }
+    [theme="kennedy"] .gbar-full-spacer {
+        visibility: hidden;
+    }
+    [theme="kennedy"] .gbar-item[href="https://mail.google.com/"] {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAo9JREFUeJxNUs1rE0EU35k0iV21bWzsh6VNtp+IImrBg4r2IB6EomIpCIIgevAggoK2WqOtFCl4FFGkPejJk/4BQsGi4k0t1NJUYj5qu2maNJvsZtPdmefszCY685jZnXm/9/u99waf7T+8dH4wPf2ibOZNI2sUM7qmFvKr+Vwqt5HYWI+tq7/U1ejayuKf5EIqPp+IfYs+iXw/PTB46CCebNntse3Cu/fpice0aEgSgMQWbtUB/JBtRsl8+sz+MOu17Ui9jGsxEv7lH/PqyMjW7wR3dUycu2EASDJljE+RxagIrRomdq/4JOp65s6oMfdJwAUe+If1+avxaAoyGeZrUrpQ1DcsCwsSr6JUSbTnL7VXMwJFOdSceWNOvwZ+W7Dtn7JsEMKcsdDg6+8PREaRLAsV5uzHzbEJquug6/rDya25LyCkIhQbPANdigiEJaEQaE1vT2By3BPuEInY8UT+1j3t9n2SSDm/QOM7d6SHL6D2NoZAzCSEK+WkQAlqDDRMPPCfPO5W2DCgVGJ7mZDlTqVwcUiqr3OQkmOObHCpKeV4Sol85ZJ89XK1SQXbWjpxzD41IDicQxeN3JwlWhngLN6jR2ojd2Gbbw3h2NA5aW8vVJvttoApB1d2ubzl0ILA0rymLZul/M3r1o1rKBj8124EjJIQwmVXCpbNZjkrsSwrmUyupFZaW5paO8M9+/q6uzo8Hg8VtFRi6KJWFLS4khslQHK5zWh0mUVVlLAsy7zNtKGh7sD+vuCugMRrJYIgrh4b1EmH2CQei6tquq2tpbm5CTuCiPtGGAnGodCenu5wjdcrHpzTPMY8lsnqlJqm6fN5Q6F2v98vCOG/ISq5Xa7t7VaCjY4ES4K3FP8F7knkfI70EigAAAAASUVORK5CYII=");
+    }
+    [theme="kennedy"] .gbar-item[href="https://calendar.google.com/"] {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAilJREFUeJx1U81rE1EQf7vvJRt2UytUbFpPwYJIiR5ERWJVEEFE8KK3HnqoIIgg4kHoQfwLVBTEi1I8CB7spWBAEKwexIOJH00OKQg5RM1Nkk022c0b533tblHfSybz5s283/xmJuzQqYszFx5b1OMAXHxxoyRSESrq0gJyEaUSQqL2e4aRdsZDA54h7BHqkf8vCH3CXKXTQplZ1JUQJGjX+t/fTh69RkD6/St42HhKZxbsqZI6MgEpPpAtHMxMH+BchkH6geSdXOkqF5egbIxz7Se2vJGaEEIKwuatvxZTbHEpJ3QrToWl2XCt6uA578CZ/UO0VjYz3cBSLsRIxiFGFvL0vsHi4b7nwMtqFmGvnOwXdvCfv+278/3lVXd79QCRDTEgbhaOFUdrn3OLRwZIIe/w8t7wxguv2aHPL3ePz0UbTZYugk5bHbsB3FnPl/aEylLcNUZlq0MRZKtjT0/ydM4g0+bxYykCcjB04aUzGAQtQaYdVxJ0UU2zwA8sVJB/b0DyOTBRSaYJ56QjRjZ/2Viqs/OjaovN7eb3X5PZnVRPgdym2vGrkDQDfx++cW6dC5bKoyfvWK1Wv7l0InZuNOpJn2POtRY9/2BC9fxTi156hPMb+e2v0bAXe9Y/Vl6trqQ4E2LYaJuulI7sxp6bH9Yrz27LIRn1rIy3veA6jOjIL4gpWYwVpooUwf7GdXfhHsanIJNM/B/foqEv/8I45WPkidnG938AGNOfM62IkOsAAAAASUVORK5CYII=");
+    }
+    [theme="kennedy"] .gbar-item[href="https://mail.google.com/"],
+    [theme="kennedy"] .gbar-item[href="https://calendar.google.com/"] {
+        width: 20px;
+        height: 100%;
+        background-size: 20px auto;
+        background-repeat: no-repeat;
+        background-position: 25px center;
+        padding: 0 25px;
+        margin-right: 22px;
+    }
+    [theme="kennedy"] .gbar-item[href="https://calendar.google.com/"]::before,
+    [theme="kennedy"] .gbar-item[href="https://mail.google.com/"]::before {
+        position: absolute;
+        left: 53px;
+        content: "0";
+        color: #dc493f;
+    }
+    [theme="kennedy"] .gbar-item-dropdown.active > .gbar-item {
+        background-color: transparent;
+        font-weight: normal;
+        line-height: 45px;
+        color: #fff;
+        border: none;
+        padding: 0 25px;
+    }
+    [theme="kennedy"] .gbar-item-dropdown > .gbar-item::after {
+        content: "";
+        display: inline-block;
+        border-top: 4px solid #626262;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        padding-top: 1px;
+        margin-bottom: 1px;
+        margin-left: 4px;
+    }
+    [theme="kennedy"] .gbar-item-dropdown > .gbar-item:hover::after,
+    [theme="kennedy"] .gbar-item-dropdown.active > .gbar-item::after {
+        border-top: 4px solid #fff;
+    }
+    [theme="kennedy"] .gbar-item-dropdown.active > .gbar-item::before {
+        content: "";
+        position: absolute;
+        top: calc(100% - 7px);
+        left: 50%;
+        translate: calc(-50% - 7px) 0;
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+    [theme="kennedy"] .gbar-item-dropdown > .gbar-item::after {
+        border-top: 4px solid #626262;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        margin-left: 8px;
+        margin-bottom: 0;
+    }
+    [theme="kennedy"] .gbar-item-dropdown > .gbar-item:hover::after {
+        border-top: 4px solid #fff;
+    }
+    [theme="kennedy"] .gbar-item-dropdown:has(.gbar-account-menu),
+    [theme="kennedy"] .gbar-item[href*="https://accounts.google.com/ServiceLogin"]:not(.gbar-item-dropdown > .gbar-item) {
+        position: absolute;
+        right: 0px;
+        margin-right: 54px;
+    }
+    [theme="kennedy"] .gbar-item-dropdown.active:has(.gbar-account-menu) > .gbar-item::before {
+        translate: calc(-50% - 7px + 25px - 6px) 0;
+    }
+    [theme="kennedy"] .gbar-item-dropdown:has(.gbar-account-menu) > .gbar-item {
+        padding: 0 25px 0 63px;
+    }
+    [theme="kennedy"] .gbar-item-dropdown:has(.gbar-account-menu)::before {
+        background-image: var(--user-picture);
+        background-size: 100%;
+        position: relative;
+        content: "";
+        display: inline-block;
+        top: 8px;
+        left: 51px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #393939;
+    }
+    [theme="kennedy"] .gbar-spacer {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    [theme="kennedy"] .gbar-menu {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        top: calc(100% - 1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        padding: 10px 0;
+        background-color: #fff;
+    }
+    [theme="kennedy"] .gbar-menu.left {
+        right: 25px;
+    }
+    [theme="kennedy"] .gbar-menu.center {
+        left: 5px;
+        translate: none;
+    }
+    [theme="kennedy"] .gbar-menu.right {
+        left: 25px;
+    }
+    [theme="kennedy"] .gbar-menu-item {
+        background-color: #fff;
+        color: #b2b2b2;
+        font-weight: normal;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 35px 0 20px;
+        text-decoration: none;
+    }
+    [theme="kennedy"] .gbar-menu-item:hover {
+        color: #595959;
+        background-color: #f6f6f6;
+    }
+    [theme="kennedy"] .gbar-menu-spacer {
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+    }
+    [theme="kennedy"] .gbar-account-menu {
+        padding: 0;
+    }
+    [theme="kennedy"] .gbar-account-menu-information {
+        padding: 16px 48px 12px 12px;
+    }
+    [theme="kennedy"] .gbar-account-menu-picture {
+        margin-right: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+    [theme="kennedy"] .gbar-account-menu-name {
+        color: #595959;
+        font-weight: normal;
+    }
+    [theme="kennedy"] .gbar-account-menu-email {
+        color: #b2b2b2;
+        font-size: 11px;
+        font-weight: normal;
+    }
+    [theme="kennedy"] .gbar-account-menu-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    [theme="kennedy"] .gbar-account-menu-separator {
+        color: #ccc;
+        line-height: 21px;
+    }
+    [theme="kennedy"] .gbar-account-menu-link {
+        color: #4e8df8;
+        font-size: 11px;
+        line-height: 21px;
+        font-weight: normal;
+    }
+    [theme="kennedy"] .gbar-account-menu-buttons {
+        height: 54px;
+        padding: 0 12px;
+        background: #fff;
+        box-shadow: none;
+        align-items: center;
+        border-top: 1px solid #ebebeb;
+    }
+    [theme="kennedy"] .gbar-account-menu-button {
+        color: #6d6d6d;
+        background: #f1f1f1;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 0 14px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 28px;
+        font-weight: normal;
+        box-shadow: none;
+        text-decoration: none;
+        cursor: default;
+    }
+    [theme="kennedy"] .gbar-account-menu-button:hover {
+        color: #595959;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    [theme="kennedy"] .gbar-account-menu-button:active,
+    [theme="kennedy"] .gbar-account-menu-button:focus {
+        color: #595959;
+        background: #e5e5e5;
+        border: 1px solid #d7d7d7;
+    }
+    [theme="kennedy"] .gbar-account-menu-button[href*="https://accounts.google.com/Logout"] {
+        color: #fff;
+        background: #dd4b39;
+        border: 1px solid transparent;
+    }
 }
