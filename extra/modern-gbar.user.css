@@ -9,6 +9,7 @@
 @var checkbox darkmenu "Dark Menu" 0
 @var checkbox noborder "No Border" 1
 @var checkbox bluesignin "Blue Sign in Button" 1
+@var checkbox settingspin "Spinning Settings Icon" 0
 ==/UserStyle== */
 
 @-moz-document domain("google.com"), domain("youtube.com") {
@@ -63,6 +64,15 @@
         }
         [theme="modern"] .gbar-item:not(.active, :has(+ .gbar-account-menu))[href^="https://accounts.google.com/ServiceLogin?continue="]:active::before {
             background-color: light-dark(#2367d5, #adcfe4) !important;
+        }
+    }
+
+    if settingspin {
+        [theme="modern"] .gbar-item-icon.settings {
+            transition: transform 0.2s;
+        }
+        [theme="modern"] .gbar-item-dropdown.active .gbar-item-icon.settings {
+            transform: translate(-50%, -50%) rotate(180deg);
         }
     }
 
