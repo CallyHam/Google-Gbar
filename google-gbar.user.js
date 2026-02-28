@@ -769,6 +769,26 @@ gBarStyle.textContent = `
 .gbar-menu.right {
   left: 0;
 }
+.gbar-account-menu {
+  flex-direction: column;
+}
+.gbar-account-menu-information {
+  display: flex;
+  flex-direction: row;
+}
+.gbar-account-menu-picture {
+  width: 48px;
+  height: 48px;
+}
+.gbar-account-menu-details {
+  display: flex;
+  flex-direction: column;
+}
+.gbar-account-menu-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* Era Specific Styling */
 
@@ -974,6 +994,7 @@ gBarStyle.textContent = `
   flex-direction: column;
 }
 [theme="2010"] .gbar-account-menu-picture {
+  width: 32px;
   height: 32px;
   border: 1px solid #e5e5e5;
   margin-right: 10px;
@@ -1135,6 +1156,7 @@ gBarStyle.textContent = `
 }
 [theme="2011"] .gbar-account-menu-picture,
 [theme="2013"] .gbar-account-menu-picture {
+  width: 54px;
   height: 54px;
   margin-right: 15px;
   border: 1px solid #bebebe;
