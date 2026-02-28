@@ -1664,6 +1664,7 @@ async function loadConfig() {
             break;
           case "2011":
           case "2013":
+          default:
             newElementMenu.innerHTML = `
             <div class="gbar-account-menu-information">
               ${item.profile_picture ? `<img src="${userPicture}" class="gbar-account-menu-picture">` : ""}
