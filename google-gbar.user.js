@@ -1845,10 +1845,6 @@ async function changeConfig() {
     body {
       overflow: hidden !important;
     }
-    #gbar * {
-      user-select: none !important;
-      cursor: default !important;
-    }
     [theme="2009"] .gbar-full-spacer::after {
       display: inline-block;
       content: "<-->";
