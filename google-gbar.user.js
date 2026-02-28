@@ -918,15 +918,29 @@ gBarStyle.textContent = `
   box-shadow: inset 0 3px 0 #1a54e1;
 }
 
-[theme="2010"] .gbar-item-icon.settings {
+[theme="2010"] .gbar-item:has(> .gbar-item-icon),
+[theme="2011"] .gbar-item:has(> .gbar-item-icon),
+[theme="2013"] .gbar-item:has(> .gbar-item-icon) {
+  font-size: 0;
+}
+
+[theme="2010"] .gbar-item-icon {
   display: inline-block;
+  vertical-align: text-bottom;
+  pointer-events: none;
+}
+
+[theme="2010"] .gbar-item-icon.settings {
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01LjY4NzUgMy42MjVMNC44MTI1IDQuMDYyNUwzLjA2MjUgMi4zMTI1TDEuMzEyNSA0LjA2MjVMMy4wNjI1IDUuODEyNUwyLjYyNSA2LjY4NzVIMFY5LjMxMjVIMi42MjVMMy4wNjI1IDEwLjE4NzVMMS4zMTI1IDExLjkzNzVMMy4wNjI1IDEzLjY4NzVMNC44MTI1IDExLjkzNzVMNS42ODc1IDEyLjM3NVYxNUg4LjMxMjVWMTIuMzc1TDkuMTg3NSAxMS45Mzc1TDEwLjkzNzUgMTMuNjg3NUwxMi42ODc1IDExLjkzNzVMMTAuOTM3NSAxMC4xODc1TDExLjM3NSA5LjMxMjVIMTRWNi42ODc1SDExLjM3NUwxMC45Mzc1IDUuODEyNUwxMi42ODc1IDQuMDYyNUwxMC45Mzc1IDIuMzEyNUw5LjE4NzUgNC4wNjI1TDguMzEyNSAzLjYyNVYxSDUuNjg3NVYzLjYyNVpNNyAxMC40MDYyQzguMzI4OTMgMTAuNDA2MiA5LjQwNjI1IDkuMzI4OTMgOS40MDYyNSA4QzkuNDA2MjUgNi42NzEwNiA4LjMyODkzIDUuNTkzNzUgNyA1LjU5Mzc1QzUuNjcxMDYgNS41OTM3NSA0LjU5Mzc1IDYuNjcxMDYgNC41OTM3NSA4QzQuNTkzNzUgOS4zMjg5MyA1LjY3MTA2IDEwLjQwNjIgNyAxMC40MDYyWiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC4yNSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUuNjg3NSAyLjYyNUw0LjgxMjUgMy4wNjI1TDMuMDYyNSAxLjMxMjVMMS4zMTI1IDMuMDYyNUwzLjA2MjUgNC44MTI1TDIuNjI1IDUuNjg3NUgwVjguMzEyNUgyLjYyNUwzLjA2MjUgOS4xODc1TDEuMzEyNSAxMC45Mzc1TDMuMDYyNSAxMi42ODc1TDQuODEyNSAxMC45Mzc1TDUuNjg3NSAxMS4zNzVWMTRIOC4zMTI1VjExLjM3NUw5LjE4NzUgMTAuOTM3NUwxMC45Mzc1IDEyLjY4NzVMMTIuNjg3NSAxMC45Mzc1TDEwLjkzNzUgOS4xODc1TDExLjM3NSA4LjMxMjVIMTRWNS42ODc1SDExLjM3NUwxMC45Mzc1IDQuODEyNUwxMi42ODc1IDMuMDYyNUwxMC45Mzc1IDEuMzEyNUw5LjE4NzUgMy4wNjI1TDguMzEyNSAyLjYyNVYwSDUuNjg3NVYyLjYyNVpNNyA5LjQwNjI1QzguMzI4OTMgOS40MDYyNSA5LjQwNjI1IDguMzI4OTMgOS40MDYyNSA3QzkuNDA2MjUgNS42NzEwNiA4LjMyODkzIDQuNTkzNzUgNyA0LjU5Mzc1QzUuNjcxMDYgNC41OTM3NSA0LjU5Mzc1IDUuNjcxMDYgNC41OTM3NSA3QzQuNTkzNzUgOC4zMjg5MyA1LjY3MTA2IDkuNDA2MjUgNyA5LjQwNjI1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzI1OV8xMSkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMSA3QzExIDkuMjA5MTQgOS4yMDkxNCAxMSA3IDExQzQuNzkwODYgMTEgMyA5LjIwOTE0IDMgN0MzIDQuNzkwODYgNC43OTA4NiAzIDcgM0M5LjIwOTE0IDMgMTEgNC43OTA4NiAxMSA3Wk03IDEwQzguNjU2ODUgMTAgMTAgOC42NTY4NSAxMCA3QzEwIDUuMzQzMTUgOC42NTY4NSA0IDcgNEM1LjM0MzE1IDQgNCA1LjM0MzE1IDQgN0M0IDguNjU2ODUgNS4zNDMxNSAxMCA3IDEwWiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4zNSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzI1OV8xMSIgeDE9IjciIHkxPSIwIiB4Mj0iNyIgeTI9IjE0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3MTkzRDYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDYzMDg0Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==);
   background-position: center;
   background-repeat: no-repeat;
-  vertical-align: text-bottom;
   width: 14px;
   height: 15px;
-  pointer-events: none;
+  margin-top: 7px;
+}
+
+[theme="2010"] .gbar-item-dropdown.active .gbar-item-icon.settings {
+  margin-top: 4px;
 }
 
 [theme="2010"] .gbar-spacer {
@@ -1050,17 +1064,22 @@ gBarStyle.textContent = `
   box-shadow: inset 0 2px 0 #dd4b39;
 }
 
+[theme="2011"] .gbar-item-icon,
+[theme="2013"] .gbar-item-icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  pointer-events: none;
+}
+
 [theme="2011"] .gbar-item-icon.settings,
 [theme="2013"] .gbar-item-icon.settings {
   display: inline-block;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02LjUgNEw1LjUgNC41TDMuNSAyLjVMMS41IDQuNUwzLjUgNi41TDMgNy41SDBWMTAuNUgzTDMuNSAxMS41TDEuNSAxMy41TDMuNSAxNS41TDUuNSAxMy41TDYuNSAxNFYxN0g5LjVWMTRMMTAuNSAxMy41TDEyLjUgMTUuNUwxNC41IDEzLjVMMTIuNSAxMS41TDEzIDEwLjVIMTZWNy41SDEzTDEyLjUgNi41TDE0LjUgNC41TDEyLjUgMi41TDEwLjUgNC41TDkuNSA0VjFINi41VjRaTTggMTEuNzVDOS41MTg3OCAxMS43NSAxMC43NSAxMC41MTg4IDEwLjc1IDlDMTAuNzUgNy40ODEyMiA5LjUxODc4IDYuMjUgOCA2LjI1QzYuNDgxMjIgNi4yNSA1LjI1IDcuNDgxMjIgNS4yNSA5QzUuMjUgMTAuNTE4OCA2LjQ4MTIyIDExLjc1IDggMTEuNzVaIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02LjUgM0w1LjUgMy41TDMuNSAxLjVMMS41IDMuNUwzLjUgNS41TDMgNi41SDBWOS41SDNMMy41IDEwLjVMMS41IDEyLjVMMy41IDE0LjVMNS41IDEyLjVMNi41IDEzVjE2SDkuNVYxM0wxMC41IDEyLjVMMTIuNSAxNC41TDE0LjUgMTIuNUwxMi41IDEwLjVMMTMgOS41SDE2VjYuNUgxM0wxMi41IDUuNUwxNC41IDMuNUwxMi41IDEuNUwxMC41IDMuNUw5LjUgM1YwSDYuNVYzWk04IDEwLjc1QzkuNTE4NzggMTAuNzUgMTAuNzUgOS41MTg3OCAxMC43NSA4QzEwLjc1IDYuNDgxMjIgOS41MTg3OCA1LjI1IDggNS4yNUM2LjQ4MTIyIDUuMjUgNS4yNSA2LjQ4MTIyIDUuMjUgOEM1LjI1IDkuNTE4NzggNi40ODEyMiAxMC43NSA4IDEwLjc1WiIgZmlsbD0iI0VBRUFFQSIvPgo8L3N2Zz4K);
   background-position: center;
   background-repeat: no-repeat;
-  vertical-align: text-bottom;
-  margin-bottom: -1px;
   width: 16px;
   height: 17px;
-  pointer-events: none;
+  margin-top: 7px;
 }
 
 [theme="2011"] .gbar-item-dropdown.active .gbar-item-icon.settings {
@@ -1324,11 +1343,11 @@ if (document.querySelector("[href^='https://accounts.google.com/SignOutOptions']
   userInfo = userInfo.join(" ").split("\n");
 
   userEmail = userInfo[1].replace(/\(|\)/g, "");
-  userName = userInfo[0];
+  userName = userInfo[0].trim();
   userPicture = infoElement.querySelector("img").src.replace("s32", "s128");
 
   oldUserEmail = userInfo[1].replace(/\(|\)/g, "");
-  oldUserName = userInfo[0];
+  oldUserName = userInfo[0].trim();
   oldUserPicture = infoElement.querySelector("img").src.replace("s32", "s128");
 
   gBar.style.setProperty("--user-picture", `url(${userPicture})`);
@@ -1550,6 +1569,7 @@ async function loadConfig() {
         newElement.classList.add("gbar-item");
         newElement.innerHTML = parseString(item.label);
         newElement.href = parseString(item.url);
+        newElement.title = parseString(item.label);
 
         if (detectLocation(configJson.layout, configJson.layout.indexOf(item)) == true || item.label.startsWith("*")) {
           newElement.classList.add("active");
@@ -1577,8 +1597,10 @@ async function loadConfig() {
         let newElementLink = document.createElement("a");
         newElementLink.classList.add("gbar-item");
         newElementLink.href = parseString(item.url);
+        newElementLink.title = parseString(item.label);
         if (item.icon && gBar.getAttribute("theme") != "2009") {
           let newElementIcon = document.createElement("span");
+          newElementLink.innerHTML = parseString(item.label);
           newElementIcon.classList.add("gbar-item-icon");
           newElementIcon.classList.add(item.icon);
           newElementLink.appendChild(newElementIcon);
@@ -1602,6 +1624,7 @@ async function loadConfig() {
               newSubElement.classList.add("gbar-menu-item");
               newSubElement.innerHTML = parseString(subitem.label);
               newSubElement.href = parseString(subitem.url);
+              newSubElement.title = parseString(item.label);
               break;
             }
             case "spacer": {
@@ -1644,7 +1667,16 @@ async function loadConfig() {
         let newElementLink = document.createElement("a");
         newElementLink.classList.add("gbar-item");
         newElementLink.href = parseString(item.url);
-        newElementLink.innerHTML = parseString(item.label);
+        newElementLink.title = parseString(item.label);
+        if (item.icon && gBar.getAttribute("theme") != "2009") {
+          let newElementIcon = document.createElement("span");
+          newElementLink.innerHTML = parseString(item.label);
+          newElementIcon.classList.add("gbar-item-icon");
+          newElementIcon.classList.add(item.icon);
+          newElementLink.appendChild(newElementIcon);
+        } else {
+          newElementLink.innerHTML = parseString(item.label);
+        }
 
         newElement.appendChild(newElementLink);
 
@@ -1694,7 +1726,7 @@ async function loadConfig() {
                 <span class="gbar-account-menu-name">${userName}</span>
                 <span class="gbar-account-menu-email">${userEmail}</span>
                 <div class="gbar-account-menu-links">
-                  <a class="gbar-account-menu-link" href="https://myaccount.google.com">Google Account</a>
+                  <a class="gbar-account-menu-link" href="https://myaccount.google.com">Account</a>
                   <span class="gbar-account-menu-separator">–</span>
                   <a class="gbar-account-menu-link" href="https://policies.google.com/privacy">Privacy</a>
                 </div>
