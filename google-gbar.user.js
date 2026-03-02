@@ -1582,12 +1582,14 @@ async function loadConfig() {
                         case "configure":
                             newElement.addEventListener("click", (event) => {
                                 event.preventDefault();
+                                newElement.blur();
                                 changeConfig();
                             });
                             break;
                         case "refresh":
                             newElement.addEventListener("click", (event) => {
                                 event.preventDefault();
+                                newElement.blur();
                                 placeGBar();
                             });
                             break;
@@ -1658,6 +1660,7 @@ async function loadConfig() {
                                     case "configure":
                                         newSubElement.addEventListener("click", (event) => {
                                             event.preventDefault();
+                                            newSubElement.blur();
                                             newElement.classList.remove("active");
                                             changeConfig();
                                         });
@@ -1665,6 +1668,7 @@ async function loadConfig() {
                                     case "refresh":
                                         newSubElement.addEventListener("click", (event) => {
                                             event.preventDefault();
+                                            newSubElement.blur();
                                             newElement.classList.remove("active");
                                             placeGBar();
                                         });
