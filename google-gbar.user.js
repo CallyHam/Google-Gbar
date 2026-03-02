@@ -1294,6 +1294,7 @@ gBarStyle.textContent = `
   background-color: #fff;
   border-left: 1px solid #bebebe;
   border-right: 1px solid #bebebe;
+  height: 30px;
   padding: 0 8px;
 }
 
