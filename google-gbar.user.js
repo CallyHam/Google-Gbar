@@ -1399,6 +1399,10 @@ function placeGBar() {
     const gplex = document.getElementById("ugf");
     const v3 = document.getElementById("masthead-positioner");
 
+    if (settingsOpen) {
+        return;
+    }
+
     if (gplex) {
         gplex.prepend(gBar);
     } else if (v3) {
@@ -2164,10 +2168,10 @@ async function changeConfig() {
     });
 
     gBarSettings.querySelector(".gbar-config-button#cancel").addEventListener("click", function () {
-        placeGBar();
+        settingsOpen = false;
         gBarSettings.remove();
 
-        settingsOpen = false;
+        placeGBar();
     });
 
     gBarSettings.querySelector("#gbar-config-content").prepend(gBar);
