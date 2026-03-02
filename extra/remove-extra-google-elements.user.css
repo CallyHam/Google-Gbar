@@ -10,41 +10,42 @@
 ==/UserStyle== */
 
 @-moz-document domain("google.com") {
-    /* Gplex */
-    #ugf-account-button,
-    #ugf-homepage-links,
-    #ugf-apps,
-    #ugf-settings-tab,
-    #ugf-sign-in,
-    .ugf-plus-buttons {
-        display: none !important;
+  /* Gplex */
+  #ugf-account-button,
+  #ugf-homepage-links,
+  #ugf-apps,
+  #ugf-settings-tab,
+  #ugf-sign-in,
+  .ugf-plus-buttons {
+    display: none !important;
+  }
+
+  if personalbuttons {
+    #ugf-navbar-right {
+      display: none !important;
     }
-    
-    if personalbuttons {
-        #ugf-navbar-right {
-            display: none !important;
-        }
-    } else {
-        #ugf-personal-buttons {
-            margin-right: 0;
-        }
-        #ugf-settings-button {
-            display: none !important;
-        }
+  }
+  else {
+    #ugf-personal-buttons {
+      margin-right: 0;
     }
-    
-    /* Actual Google (Will probably break at some point) */
-    if noai {
-        button.plR5qb,
-        div.YNk70c.EjQTId,
-        div.beZ0tf.O1uzAe > div[jsname="xBNgKe"][role="listitem"],
-        div#eKIzJc {
-            display: none !important;
-        }
+    #ugf-settings-button {
+      display: none !important;
     }
-    
-    .Ne6nSd,
-    .Q3DXx:not(.NDnoQ) {
-        display: none !important;
+  }
+
+  /* Actual Google (Will probably break at some point) */
+  if noai {
+    button.plR5qb,
+    div.YNk70c.EjQTId,
+    div.beZ0tf.O1uzAe > div[jsname="xBNgKe"][role="listitem"],
+    div#eKIzJc {
+      display: none !important;
     }
+  }
+
+  .Ne6nSd,
+  .Q3DXx:not(.NDnoQ) {
+    display: none !important;
+  }
 }
