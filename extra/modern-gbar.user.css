@@ -8,8 +8,13 @@
 @var checkbox darkbar "Dark Bar" 0
 @var checkbox darkmenu "Dark Menu" 0
 @var checkbox noborder "No Border" 1
-@var checkbox bluesignin "Blue Sign in Button" 1
+@var checkbox bluesignin "Blue Sign In Button" 1
 @var checkbox settingspin "Spinning Settings Icon" 0
+@var select menutextalignment "Menu Text Alignment" {
+    "Left": "left",
+    "Center": "center",
+    "Right": "right"
+} Center
 ==/UserStyle== */
 
 @-moz-document domain("google.com"), domain("youtube.com") {
@@ -178,7 +183,8 @@
         margin: auto 5px;
     }
     [theme="modern"] .gbar-menu {
-        display: flex;
+        display: inline-flex;
+        flex-direction: column;
         top: calc(100% + 8px);
         background-color: light-dark(#f5f8ff, #242832);
         border: none;
@@ -209,6 +215,7 @@
         background: transparent;
         font-size: 14px;
         font-weight: 500;
+        text-align: menutextalignment;
         height: 48px;
         border: none;
         border-radius: 3px;
@@ -242,6 +249,7 @@
     }
     [theme="modern"] .gbar-account-menu {
         display: flex;
+        flex-direction: column;
         padding: 0px;
         gap: 0px;
     }
