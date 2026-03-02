@@ -1418,7 +1418,6 @@ function validateJson(jsonString) {
 }
 
 async function loadPresets(dropdownElement, codeElementEdit, codeElementDisplay) {
-    console.log(codeElementDisplay);
     dropdownElement.querySelectorAll("*:not(.gbar-config-dropdown-spacer#default):not(.gbar-config-dropdown-item#preset)").forEach((element) => {
         element.remove();
     });
@@ -1571,6 +1570,27 @@ async function loadConfig() {
                 newElement.href = parseString(item.url);
                 newElement.title = parseString(item.label);
 
+                if (parseString(item.url).startsWith("gbar:")) {
+                    const command = parseString(item.url).split(":")[1];
+
+                    switch (command) {
+                        case "configure":
+                            newElement.addEventListener("click", (event) => {
+                                event.preventDefault();
+                                changeConfig();
+                            });
+                            break;
+                        case "refresh":
+                            newElement.addEventListener("click", (event) => {
+                                event.preventDefault();
+                                placeGBar();
+                            });
+                            break;
+                    }
+                } else {
+                    newElement.href = parseString(item.url);
+                }
+
                 if (detectLocation(configJson.layout, configJson.layout.indexOf(item)) == true || item.label.startsWith("*")) {
                     newElement.classList.add("active");
                     if (gBar.getAttribute("theme") == "2009") {
@@ -1625,6 +1645,32 @@ async function loadConfig() {
                             newSubElement.innerHTML = parseString(subitem.label);
                             newSubElement.href = parseString(subitem.url);
                             newSubElement.title = parseString(subitem.label);
+
+                            if (parseString(subitem.url).startsWith("gbar:")) {
+                                const command = parseString(subitem.url).split(":")[1];
+
+                                switch (command) {
+                                    case "configure":
+                                        newSubElement.addEventListener("click", (event) => {
+                                            event.preventDefault();
+                                            newElement.classList.remove("active");
+                                            changeConfig();
+                                        });
+                                        break;
+                                    case "refresh":
+                                        newSubElement.addEventListener("click", (event) => {
+                                            event.preventDefault();
+                                            newElement.classList.remove("active");
+                                            placeGBar();
+                                        });
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            } else {
+                                newSubElement.href = parseString(subitem.url);
+                            }
+
                             break;
                         }
                         case "spacer": {
