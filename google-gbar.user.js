@@ -9,9 +9,9 @@
 // @exclude      *://accounts.google.com/*
 // @exclude      *://myaccount.google.com/*
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANASURBVHgBxVfPTxNREJ73WmqjNrbxAsToFk4mGsp/sFW8Sr1oEzBdEhOPysmLCfAfFE5eDBU1AsYEEw8mYHY5eKZ48YKynKwnVg1SCrvjvO0Ptku3/KhdvqSb7ex78307O2/eGwbHwHpKjprhjlTAwj76KyFjCQCM0n20MsQABB0YGAwhbwIuB0qmFl/QDC+fDI6AtfQtJYCYQQC5RgSgM8C8y53kGOOExpDngPPl+OxH/cgC1tMDMiKbpreUao4sNh5/u7jsNWeFohQJ8xRHNiYEuZ8z4FljpzTRX4lKQwEi1NaZwDgD9qhsQZ1ZXGlG3Ahr6RuKWwgijPfOL03sC2pAjqGgSk8S9gSAhd87eyP9Tb5jM3xNy9IZDKj253GRNxTw/e7ASpWc2PM980v90CKEiBB2DPbOLU66n9UJ+HbvZtYZ9h1mJq/Oajq0Ebx6IzJ9n5yUUbjaTW7ziAuqndLur7Ba+HBZ2vsTEha9Z+5THHxAJQJc6bhQkrpub0AwUrLfHnxC9RNkxCUY2QUhosjNYy23VsBQvSQDWOq+idZ88ocv4RfgwHHQZdPBR3Ba64k6C2M6+AgSUKvzpwKRhBKcIvgBC2ICfAQJYK5NhkngI0gAune5KH7uugI+gVMx1g5Y9yAFPiEIjOcBrXqrZQuYhBbQ+XhThkMSnDYiOjuqEh0oS5vOBw83r8HMVneyeD+nwQmIaS8Zo/oiHzJUxxIkOUvqlAOoOclf/e2mekROTkJuQR+dfHJ0kqLtHVIohKA16h5LMc8WnsX06nYsUzqoVfIqyMno9nAuCy2iIkx12oTAwlTshV0HWLKgPTCuLzjJbTvAWPiNIkEbUStE74yuESif952ICuXtFFETYIzkDAvhjnsAJZTUThF1pVhkvcUOnoZqIl4qMrRTgC1iKDfhJYIzUM++Vqb/ZzQ8W7PwtCLxIIgGRfKYqJmc5ahnXN0ayuW9fARCIJ//8iTDt8VKq801TFoFP6di7w9tTs/NKIrFIcOgaWGpNKvlJEbRLTP6YVk8L140IqtPNVH2qS7kiwFYNbIx797Q820CJIJDHxWRBBORwbroGKItJ5twnLfFcJY3La4Vh59vePn9B5SSRU22pguXAAAAAElFTkSuQmCC
-// @grant        GM_registerMenuCommand
-// @grant        GM_getValue
-// @grant        GM_setValue
+// @grant        GM.registerMenuCommand
+// @grant        GM.getValue
+// @grant        GM.setValue
 // @run-at       document-idle
 // @noframes
 // ==/UserScript==
@@ -2132,5 +2132,5 @@ loadConfig();
 
 placeGBar();
 
-GM_registerMenuCommand("Configure Gbar", changeConfig);
-GM_registerMenuCommand("Refresh Gbar", placeGBar);
+GM.registerMenuCommand("Configure Gbar", changeConfig);
+GM.registerMenuCommand("Refresh Gbar", placeGBar);
