@@ -105,7 +105,8 @@
   [theme="modern"] .gbar-item:hover {
     color: light-dark(#1f1f1f, #e8e8e8);
   }
-  [theme="modern"] .gbar-item.active [theme="modern"] .gbar-item-dropdown.active > .gbar-item {
+  [theme="modern"] .gbar-item.active,
+  [theme="modern"] .gbar-item-dropdown.active > .gbar-item {
     color: light-dark(#1f1f1f, #e8e8e8);
     font-weight: 500;
     font-size: 14px;
